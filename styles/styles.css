@@ -90,6 +90,12 @@ nav .logo {
   padding-left: 28px;
 }
 
+#header .news-header {
+  background: #45e1fd;
+  height: 100%;
+  padding-left: 28px;
+}
+
 .title-wrapper .big-title {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }

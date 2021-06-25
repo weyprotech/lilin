@@ -412,7 +412,7 @@ textarea {
   box-sizing: border-box;
   outline: none;
   background-color: transparent;
-  border-radius: 3px;
+  /* border-radius: 3px; */
   border: 0;
   margin: 0 0.3em;
 }
@@ -432,7 +432,7 @@ textarea {
 
 .btn.frame {
   border: 1px solid #ffffff;
-  border-radius: 3px;
+  /* border-radius: 3px; */
   color: #ffffff;
   margin: 0.5em;
 }
@@ -463,7 +463,7 @@ textarea {
 
 .btn.frame02 {
   border: 1px solid #d0021b;
-  border-radius: 3px;
+  /* border-radius: 3px; */
   color: #555;
   margin: 0.5em;
 }
@@ -570,9 +570,9 @@ input[type="search"].search-form {
 
 input.search-news,
 input[type="search"].search-news {
-  background-color: #fff;
+  background-color: #000;
   border: none;
-  color: #000;
+  color: #b3b1b1;
   width: 63%;
   float: left;
   outline: none;
@@ -589,7 +589,7 @@ input.search-down,
 input[type="search"].search-down {
   background-color: #fff;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  /* border-radius: 3px; */
   color: #000;
   width: 30%;
   float: left;
@@ -679,18 +679,18 @@ select:focus {
 }
 
 select.news-select {
-  background-color: #fff;
-  background-image: url("../images/components/select-arrow02.jpg");
+  background-color: #000;
+  background-image: url("../images/components/select-arrow03.png");
   background-position: 95% center;
   background-repeat: no-repeat;
   box-sizing: border-box;
   width: 100%;
-  border-radius: 3px;
-  border: 1px solid #d0021b;
+  /* border-radius: 3px; */
+  border: 1px solid #b3b1b1;
   height: 44px;
   padding: 0 2em;
   margin: 1em 0;
-  color: #d0021b;
+  color: #b3b1b1;
 }
 
 select.news-select:focus {
@@ -698,18 +698,18 @@ select.news-select:focus {
 }
 
 select.year-select {
-  background-color: #fff;
-  background-image: url("../images/components/select-arrow03.jpg");
+  background-color: #000;
+  background-image: url("../images/components/select-arrow03.png");
   background-position: 95% center;
   background-repeat: no-repeat;
   box-sizing: border-box;
   width: 100%;
-  border-radius: 3px;
-  border: 1px solid #adadad;
+  /* border-radius: 3px; */
+  border: 1px solid #b3b1b1;
   height: 44px;
   padding: 0 3em;
   margin: 0 0 1em 0;
-  color: #000;
+  color: #b3b1b1;
 }
 
 select.year-select:focus {
@@ -741,7 +741,7 @@ select.table-select {
   background-repeat: no-repeat;
   box-sizing: border-box;
   width: 100%;
-  border-radius: 3px;
+  /* border-radius: 3px; */
   border: 1px solid #adadad;
   height: 44px;
   padding: 0 1em;
@@ -1595,8 +1595,8 @@ img {
   float: none;
   width: 100%;
   height: 44px;
-  border: 1px solid #a2a2a2;
-  border-radius: 3px;
+  border: 1px solid #b3b1b1;
+  /* border-radius: 3px; */
   box-sizing: border-box;
 }
 
@@ -1636,7 +1636,7 @@ img {
 }
 
 .news-content li {
-  box-shadow: 1px 1px 5px 2px rgba(51, 51, 26, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   margin-bottom: 2em;
 }
 
@@ -1657,6 +1657,7 @@ img {
 
 .news-content li .news-text h5 {
   margin: 0 0 0 0;
+  color: #868686;
 }
 
 .news-content li .news-text h5 .day {
@@ -1666,11 +1667,11 @@ img {
 .news-content li .news-text .title {
   padding: 0 0 1em 0;
   margin: 0 0 1em 0;
-  border-bottom: 1px solid #bebebe;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   min-height: 50px;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 .news-content li .news-text p {
@@ -1678,17 +1679,18 @@ img {
   min-height: auto;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 .news-content li .news-text .btn.frame {
-  border: 1px solid #000000;
-  color: #000000;
+  border: 1px solid #b3b1b1;
+  color: #b3b1b1;
 }
 
 .news-content li .news-text .btn.frame:hover {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #000;
+  color: #20adf7;
+  border: 1px solid #20adf7;
 }
 
 .news-content .demo-block {
@@ -1847,7 +1849,7 @@ img {
   background-color: none;
   border: 1px solid #c2c2c2;
   text-align: center;
-  border-radius: 3px;
+  /* border-radius: 3px; */
   margin: 0 auto;
   -webkit-transition: 0.6s;
   transition: 0.6s;
@@ -2094,7 +2096,7 @@ img {
 .software-text .structure .table-wrap .red-block {
   padding: 0.3em;
   color: #fff;
-  border-radius: 3px;
+  /* border-radius: 3px; */
   background-color: #d0021b;
   text-align: center;
   margin: 1em 1em 1em 0;
