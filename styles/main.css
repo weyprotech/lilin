@@ -6261,7 +6261,7 @@ img {
   }
   /*---- Map ----*/
   .map-select {
-    display: none;
+    display: block;
   }
   .by_map .map_menu {
     display: block;

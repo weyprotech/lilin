@@ -125,9 +125,7 @@ nav {
 
 /* global */
 .contact-main {
-  margin: 50px 0;
   color: #fff;
-  width: 80%;
   margin: 0 auto;
 }
 .contact-item {
@@ -186,7 +184,14 @@ nav {
     width: 80%;
   }
 }
-
+/*map*/
+.map-select {
+  display: flex;
+  justify-content: space-between;
+  select {
+    width: 32%;
+  }
+}
 @media screen and (max-width: 414px) {
   .support {
     height: 50px;
@@ -197,5 +202,21 @@ nav {
   }
   .support-item .pt {
     padding-top: 6px;
+  }
+  .map-select {
+    display: block;
+    justify-content: space-between;
+    select {
+      width: 100%;
+    }
+  }
+  .table-pro {
+    display: block;
+    .table-list {
+      width: 100%;
+    }
+    .table-wrap {
+      width: 100%;
+    }
   }
 }
