@@ -1234,6 +1234,7 @@
 .new-text {
   font-size: 20px;
   padding: 30px;
+  color: #333;
 }
 .new-text p {
   font-size: 17px;
@@ -1526,5 +1527,8 @@
   .banner-text h5 {
     font-size: 30px;
     line-height: 30px;
+  }
+  .support-item {
+    font-size: 16px;
   }
 }

@@ -19,6 +19,7 @@
   <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/nav.css">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -203,7 +204,9 @@
       <div class="search-block">
         <input type="text" placeholder="Search" name="search" class="search">
       </div>
-      <!-- <div class="sb-toggle-left"><img src="images/icons/mobile-menu.png" alt=""></div> -->
+      <div class="sb-toggle-left">
+        <button class="openbtn" onclick="toggleNav()"></button>
+      </div>
     </div>
   </nav>
   <div id="sb-site">
@@ -390,15 +393,16 @@
     </div>
   </div>
   <!--手機選單-->
-  <!-- <div class="sb-slidebar sb-left">
+  <div id="mySidebar" class="sidebar">
     <div class="slide">
       <div class="item">
-        <div class="second-list-btn active">
-          <p><a href="javascript:;">Products</a></p>
-          <div class="second-list-icon02"><img src="images/icons/pro_left03.png" alt="" class="close"><img
-              src="images/icons/pro_down02.png" alt="" class="open"></div>
+        <div class="second-list-btn dropdown-btn">
+          <p>Products</p>
+          <div class="second-list-icon02"><img src="images/icons/pro_left03.png" alt="" class="close">
+            <img src="images/icons/pro_down02.png" alt="" class="open">
+          </div>
         </div>
-        <div class="second-list">
+        <div class="second-list dropdown-container">
           <ul>
             <ul>
               <li><a href="product.html">IP Cameras</a></li>
@@ -415,12 +419,12 @@
         </div>
       </div>
       <div class="item">
-        <div class="second-list-btn">
+        <div class="second-list-btn dropdown-btn">
           <p><a href="javascript:;">Solutions</a></p>
           <div class="second-list-icon02"><img src="images/icons/pro_left03.png" alt="" class="close"><img
               src="images/icons/pro_down02.png" alt="" class="open"></div>
         </div>
-        <div class="second-list">
+        <div class="second-list dropdown-container">
           <ul>
             <li><a href="solution-d.html">Campus Video Solution</a></li>
             <li><a href="solution-d.html">Digital Home Solution</a></li>
@@ -437,12 +441,12 @@
         </div>
       </div>
       <div class="item">
-        <div class="second-list-btn">
+        <div class="second-list-btn dropdown-btn">
           <p><a href="javascript:;">News</a></p>
           <div class="second-list-icon02"><img src="images/icons/pro_left03.png" alt="" class="close"><img
               src="images/icons/pro_down02.png" alt="" class="open"></div>
         </div>
-        <div class="second-list">
+        <div class="second-list dropdown-container">
           <ul>
             <li><a href="news.html">NEWS</a></li>
             <li><a href="news.html">Case Studies</a></li>
@@ -451,12 +455,12 @@
         </div>
       </div>
       <div class="item">
-        <div class="second-list-btn">
+        <div class="second-list-btn dropdown-btn">
           <p><a href="javascript:;">Support</a></p>
           <div class="second-list-icon02"><img src="images/icons/pro_left03.png" alt="" class="close"><img
               src="images/icons/pro_down02.png" alt="" class="open"></div>
         </div>
-        <div class="second-list">
+        <div class="second-list dropdown-container">
           <ul>
             <li><a href="support.html">Design Tool</a></li>
             <li><a href="support.html">Technical Support</a></li>
@@ -468,12 +472,12 @@
         </div>
       </div>
       <div class="item">
-        <div class="second-list-btn">
+        <div class="second-list-btn dropdown-btn">
           <p><a href="javascript:;">Partners</a></p>
           <div class="second-list-icon02"><img src="images/icons/pro_left03.png" alt="" class="close"><img
               src="images/icons/pro_down02.png" alt="" class="open"></div>
         </div>
-        <div class="second-list">
+        <div class="second-list dropdown-container">
           <ul>
             <li><a href="partner-program-d.html">Partner Program</a></li>
             <li><a href="software-partner-d.html">Software Partners</a></li>
@@ -488,11 +492,12 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
   <script src="scripts/vendor.js"></script>
   <script src="scripts/plugins.js"></script>
   <script src="scripts/by-map.js"></script>
   <script src="scripts/main.js"></script>
+  <script src="scripts/nav.js"></script>
 </body>
 
 </html>
