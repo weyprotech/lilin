@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lilin</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-touch-icon-76x76.png">
+    <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
+
+
+
+
+
+    <style>
+        .pace.pace-inactive {
+            display: none;
+        }
+
+        .pace {
+            -webkit-pointer-events: none;
+            pointer-events: none;
+
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+
+            z-index: 2000;
+            position: fixed;
+            height: 60px;
+            width: 100px;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+        }
+
+        .pace::before {
+            content: '';
+            display: block;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: black;
+        }
+
+        .pace .pace-progress {
+            z-index: 2000;
+            position: absolute;
+            height: 60px;
+            width: 100px;
+
+            -webkit-transform: translate3d(0, 0, 0) !important;
+            -ms-transform: translate3d(0, 0, 0) !important;
+            transform: translate3d(0, 0, 0) !important;
+        }
+
+        .pace .pace-progress:before {
+            content: attr(data-progress-text);
+            text-align: center;
+            color: #fff;
+            background: #ff0000;
+            border-radius: 50%;
+            font-family: "Helvetica Neue", sans-serif;
+            font-size: 14px;
+            font-weight: 100;
+            line-height: 1;
+            padding: 20% 0 7px;
+            width: 50%;
+            height: 40%;
+            margin: 10px 0 0 30px;
+            display: block;
+            z-index: 999;
+            position: absolute;
+        }
+
+        .pace .pace-activity {
+            font-size: 15px;
+            line-height: 1;
+            z-index: 2000;
+            position: absolute;
+            height: 60px;
+            width: 100px;
+
+            display: block;
+            -webkit-animation: pace-theme-center-atom-spin 2s linear infinite;
+            -moz-animation: pace-theme-center-atom-spin 2s linear infinite;
+            -o-animation: pace-theme-center-atom-spin 2s linear infinite;
+            animation: pace-theme-center-atom-spin 2s linear infinite;
+        }
+
+        .pace .pace-activity {
+            border-radius: 50%;
+            border: 5px solid #ff0000;
+            content: ' ';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 60px;
+            width: 100px;
+        }
+
+        .pace .pace-activity:after {
+            border-radius: 50%;
+            border: 5px solid #ff0000;
+            content: ' ';
+            display: block;
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            height: 60px;
+            width: 100px;
+
+            -webkit-transform: rotate(60deg);
+            -moz-transform: rotate(60deg);
+            -o-transform: rotate(60deg);
+            transform: rotate(60deg);
+        }
+
+        .pace .pace-activity:before {
+            border-radius: 50%;
+            border: 5px solid #ff0000;
+            content: ' ';
+            display: block;
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            height: 60px;
+            width: 100px;
+
+            -webkit-transform: rotate(120deg);
+            -moz-transform: rotate(120deg);
+            -o-transform: rotate(120deg);
+            transform: rotate(120deg);
+        }
+
+        @-webkit-keyframes pace-theme-center-atom-spin {
+            0% {
+                -webkit-transform: rotate(0deg)
+            }
+
+            100% {
+                -webkit-transform: rotate(359deg)
+            }
+        }
+
+        @-moz-keyframes pace-theme-center-atom-spin {
+            0% {
+                -moz-transform: rotate(0deg)
+            }
+
+            100% {
+                -moz-transform: rotate(359deg)
+            }
+        }
+
+        @-o-keyframes pace-theme-center-atom-spin {
+            0% {
+                -o-transform: rotate(0deg)
+            }
+
+            100% {
+                -o-transform: rotate(359deg)
+            }
+        }
+
+        @keyframes pace-theme-center-atom-spin {
+            0% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(359deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <nav id="navigation" class="nav-menu">
+        <div id="cd-vertical-nav" class="cd-vertical-nav-middle">
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
+            <div class="list-content">
+                <div class="search">
+                    <input type="text" placeholder="Search" class="search-form">
+                    <div class="btn"><a href="search.html"><img src="images/icons/search-icon.png" alt=""></a></div>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="product.html" class="list-btn">Products</a>
+                            <ul>
+                                <li><a href="#">IP Cameras</a>
+                                    <ul>
+                                        <li><a href="#">- L Series IP Camera</a></li>
+                                        <li><a href="#">- M Series IP Camera</a></li>
+                                        <li><a href="#">- Z Series IP Camera</a></li>
+                                        <li><a href="#">- Pro Series IP Camera</a></li>
+                                        <li><a href="#">- S Series IP Camera</a></li>
+                                        <li><a href="#">- Ultra Series IP Camera</a></li>
+                                        <li><a href="#">- IVS Series IP Camera</a></li>
+                                        <li><a href="#">- PTZ Dome IP Camera</a></li>
+                                        <li><a href="#">- Panoramic IP Camera</a></li>
+                                        <li><a href="#">- Covert Series IP Cameras</a></li>
+                                        <li><a href="#">- Door Station</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">NVRs</a>
+                                    <ul>
+                                        <li><a href="#">- NVR Touch Series</a></li>
+                                        <li><a href="#">- NVR L Series</a></li>
+                                        <li><a href="#">- NAV Recorder</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Encoders &amp; Decoders</a>
+                                    <ul>
+                                        <li><a href="#">- Video Encoder</a></li>
+                                        <li><a href="#">- Video Decoder</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Video Management Platform</a>
+                                    <ul>
+                                        <li><a href="#">- Navigator Software</a></li>
+                                        <li><a href="#">- ANPR Software</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">AHD Series</a>
+                                    <ul>
+                                        <li><a href="#">- AHD Camera</a></li>
+                                        <li><a href="#">- AHD DVR</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="#">Analogue Cameras</a>
+                                    <ul>
+                                        <li><a href="#">- 700TVL Camera</a></li>
+                                        <li><a href="#">- 600TVL Camera</a></li>
+                                        <li><a href="#">- 540TVL Camera</a></li>
+                                        <li><a href="#">- 420TVL Camera</a></li>
+                                        <li><a href="#">- PTZ Camera</a></li>
+                                        <li><a href="#">- Panoramic Camera</a></li>
+                                        <li><a href="#">- ES Series Camera</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">DVRs</a>
+                                    <ul>
+                                        <li><a href="#">- 7 Series DVR</a></li>
+                                        <li><a href="#">- 8 Series DVR</a></li>
+                                        <li><a href="#">- Hybrid DVR</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Accessories</a>
+                                    <ul>
+                                        <li><a href="#">- POE</a></li>
+                                        <li><a href="#">- Housing</a></li>
+                                        <li><a href="#">- Bracket</a></li>
+                                        <li><a href="#">- Infrared Illuminator</a></li>
+                                        <li><a href="#">- Keyboard</a></li>
+                                        <li><a href="#">- Matrix</a></li>
+                                        <li><a href="#">- Scanner</a></li>
+                                        <li><a href="#">- Others</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">End of Life Products</a>
+                                    <ul>
+                                        <li><a href="#">- Cameras</a></li>
+                                        <li><a href="#">- Video Recorder</a></li>
+                                        <li><a href="#">- Others</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="product-selector.html">Product Selector</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="solutions.html" class="list-btn02">Solutions</a>
+                            <ul>
+                                <li><a href="solution-d.html">Campus Video Solution</a></li>
+                                <li><a href="solution-d.html">Digital Home Solution</a></li>
+                                <li><a href="solution-d.html">Retail Solution</a></li>
+                                <li><a href="solution-d.html">Bank Solution</a></li>
+                                <li><a href="solution-d.html">Central Monitoring Solution</a></li>
+                                <li><a href="solution-d.html">Low Bandwidth Mode</a></li>
+                                <li><a href="solution-d.html">ANPR License Plate Recognition</a></li>
+                                <li><a href="solution-d.html">Hotel Solution</a></li>
+                                <li><a href="solution-d.html">Casino Security Solutions</a></li>
+                                <li><a href="solution-d.html">Baggage Claim / Production Line Solutions</a></li>
+                                <li><a href="solution-d.html">Public Transport Security Solutions</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="news.html" class="list-btn03">News</a>
+                            <ul>
+                                <li><a href="news.html">News</a></li>
+                                <li><a href="news.html">Case Studies</a></li>
+                                <li><a href="news.html">Events</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="support.html" class="list-btn04">Support</a>
+                            <ul>
+                                <li><a href="support.html">Design Tool</a>
+                                    <ul>
+                                        <li><a href="project-planner.html"> - Project Planner</a></li>
+                                        <li><a href="bandwidth-storage-calculator.html"> - Bandwidth and Storage
+                                                Calculator</a></li>
+                                        <li><a href="AHD.html"> - AHD Video Recorder Storage Calculator</a></li>
+                                        <li><a href="camera-resolution-calculator.html"> - Camera Resolution
+                                                Calculator</a></li>
+                                        <li><a href="RAID.html"> - RAID Calculator</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="support.html">Technical Support</a>
+                                    <ul>
+                                        <li><a href="knowledge-base.html"> - Knowledge Base</a></li>
+                                        <li><a href="DDNS-Service.html"> - DDNS Service </a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="support.html">Video</a>
+                                    <ul>
+                                        <li><a href="video.html"> - Product Videos</a></li>
+                                        <li><a href="video.html"> - Tutorial Videos</a></li>
+                                        <li><a href="video.html"> - News Videos</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="support.html">Downloads</a>
+                                    <ul>
+                                        <li><a href="downloads.html"> - software</a></li>
+                                        <li><a href="downloads.html"> - Catalog</a></li>
+                                        <li><a href="downloads.html"> - International Technology Answers</a></li>
+                                        <li><a href="downloads.html"> - Application Problems</a></li>
+                                        <li><a href="downloads.html"> - Product specification file</a></li>
+                                        <li><a href="downloads.html"> - Development Kit</a></li>
+                                        <li><a href="downloads.html"> - Brand Media</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="support.html">Product Demonstration</a>
+                                    <ul>
+                                        <li><a href="product-demostration.html"> - Product Demonstration</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="support.html">Technical Request</a>
+                                    <ul>
+                                        <li><a href="technical-request.html"> - Technical Request</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="partners.html" class="list-btn05">Partners</a>
+                            <ul>
+                                <li><a href="partner-program-d.html">Partner Program</a></li>
+                                <li><a href="software-partner-d.html">Software Partners</a></li>
+                                <li><a href="automation-partner-d.html">Home Automation Partners</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="global.html">Global Distribution</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="search-block">
+                <input type="text" placeholder="Search" name="search" class="search">
+            </div>
+            <div class="sb-toggle-left">
+                <button class="openbtn" onclick="toggleNav()"></button>
+            </div>
+        </div>
+    </nav>
+    <!--banner-->
+    <!-- <div id="Stats-output"></div> -->
+    <div id="WebGL-output">
+        <div class="banner-text">
+            <h3>SMART CAMERA</h3>
+            <h5>NETWORKS POWERED<br>by AI</h5>
+        </div>
+    </div>
+
+    <!--products-->
+    <div class="wrapper section-direction">
+        <div class="direction__south" data-simple-target="south">
+            <div class="trigger-btn">
+                <img src="images/index/svg/ic-up.svg">
+                <label data-simple-target="south">Traffic
+                    management<br>AIDA智慧城市交通管理</label>
+            </div>
+
+            <div class="excerpt">
+                <img src="images/index/pro-1-1.png">
+                <h3>Traffic<br>management</h3>
+                <div class="excerpt-icon"><img src="images/index/ic-ai.png"></div>
+                <h5>AIDA智慧城市交通管理</h5>
+                <p>利凌運用都市影像系統，打造全方位智慧交通疏導管理解決方案，功能包含違停偵測、排隊偵測、車牌辨識及交通統計管理。</p>
+                <div class="btn-white">Read More</div>
+            </div>
+        </div>
+
+        <div class="direction__north" data-simple-target="north">
+            <div class="trigger-btn">
+                <img src="images/index/svg/ic-up.svg">
+                <label data-simple-trigger="north">Smart parking<br>AIDA智慧城市交通管理</label>
+            </div>
+
+            <div class="excerpt">
+                <img src="images/index/pro-1-2.png">
+                <h3>Smart<br>Parking</h3>
+                <div class="excerpt-icon"><img src="images/index/ic-ai.png"></div>
+                <h5>利凌AIDA智慧停車</h5>
+                <p>利凌Aida智慧停車引導系統，採壁掛安裝180度攝影機並使用AI車輛辨識，可偵測高達10個停車位，更可降低安裝電纜導軌及攝影機數量的施工及設備成本。</p>
+                <div class="btn-white">Read More</div>
+            </div>
+        </div>
+
+        <div class="direction__west" data-simple-target="west">
+            <div class="trigger-btn">
+                <img src="images/index/svg/ic-up.svg">
+                <label data-simple-trigger="west">Smart home<br>利凌數位家庭解決方案</label>
+            </div>
+
+            <div class="excerpt">
+                <img src="images/index/pro-1-3.png">
+                <h3>Smart<br>Home</h3>
+                <div class="excerpt-icon"><img src="images/index/ic-ai.png"></div>
+                <h5>利凌數位家庭解決方案</h5>
+                <p>AI攝影機、AHD攝影機、DVRs、NVRs、IO box整合、車牌辨識系統
+                    LILINHome影像管理app、DeviceHub維運管理系統及VMS影像管理系統</p>
+                <div class="btn-white">Read More</div>
+            </div>
+        </div>
+
+        <div class="direction__east" data-simple-target="east">
+            <div class="trigger-btn">
+                <img src="images/index/svg/ic-up.svg">
+                <label data-simple-trigger="east">Smart parking<br>AIDA智慧城市交通管理</label>
+            </div>
+
+            <div class="excerpt">
+                <img src="images/index/pro-1-2.png">
+                <h3>Traffic<br>management</h3>
+                <div class="excerpt-icon"><img src="images/index/ic-ai.png"></div>
+                <h5>AIDA智慧城市交通管理</h5>
+                <p>利凌運用都市影像系統，打造全方位智慧交通疏導管理解決方案，功能包含違停偵測、排隊偵測、車牌辨識及交通統計管理。</p>
+                <div class="btn-white">Read More</div>
+            </div>
+        </div>
+        <div class="bgi">
+            <img src="images/index/bg-1-1.jpg">
+            <img src="images/index/bg-1-2.jpg">
+            <img src="images/index/bg-1-3.jpg">
+            <img src="images/index/bg-1-2.jpg">
+            <img src="images/index/bg-1-1.jpg">
+        </div>
+    </div>
+
+    <!--product manual-->
+    <div class="bg-pro">
+        <h3>新世代邊緣運算<br>
+            AI 智慧 4K 網路攝影機</h3>
+        <div class="btn-white">MORE</div>
+
+        <div class="bg-pro-img">
+            <div class="pro-feature-1" data-aos="fade-left">防水設計<p>堅固耐用，且室外機種皆通過IK10的安規認證</p>
+            </div>
+            <div class="pro-feature-2" data-aos="fade-left">日夜兩用<p>全天候使用，內建可直接切換紅外線濾光片</p>
+            </div>
+            <div class="pro-feature-3" data-aos="fade-right">4K精準辨識<p>內建高速AI GPU晶片，4K辨識更精準，且運算速度可達1.0 GHz</p>
+            </div>
+            <div class="pro-feature-4" data-aos="fade-right">多元偵測<p>提供動態偵測、防破壞偵測、聲音偵測、數位警報DI偵測、網路斷線偵測、計數器、虛擬輸入</p>
+            </div>
+        </div>
+    </div>
+    <!--Business base-->
+    <div class="business-bg-1" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="3000">
+        <div class="business-text">
+            <h3>Where to buy</h3>
+            <h5>營業據點</h5>
+        </div>
+        <img src="images/index/pic-01.jpg" data-aos="fade-up" data-aos-duration="500">
+    </div>
+    <div class="business-bg-2" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="3000">
+        <div class="business-text">
+            <h3>What’s new</h3>
+            <h5>科技新知</h5>
+        </div>
+        <img src="images/index/pic-02.jpg" data-aos="fade-up" data-aos-duration="500">
+    </div>
+    <div class="business-bg-3" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="3000">
+        <div class="business-text">
+            <h3>What’s new</h3>
+            <h5>科技新知</h5>
+        </div>
+        <img src="images/index/pic-03.jpg" data-aos="fade-up" data-aos-duration="500">
+    </div>
+    <!--new-->
+    <div class="bg-new">
+        <div class="business-text">
+            <h3>Latest news</h3>
+            <h5>最新消息</h5>
+        </div>
+        <div class="new-list">
+            <div class="new-item">
+                <img src="images/index/new-1.jpg">
+                <div class="new-text">利凌前進2021智慧城市展
+                    首次亮相多款AI攝影機<p>2021.03.15</p>
+                </div>
+            </div>
+            <div class="new-item">
+                <img src="images/index/new-1.jpg">
+                <div class="new-text">利凌前進2021智慧城市展
+                    首次亮相多款AI攝影機<p>2021.03.15</p>
+                </div>
+            </div>
+            <div class="new-item">
+                <img src="images/index/new-1.jpg">
+                <div class="new-text">利凌前進2021智慧城市展
+                    首次亮相多款AI攝影機<p>2021.03.15</p>
+                </div>
+            </div>
+            <div class="new-item">
+                <img src="images/index/new-1.jpg">
+                <div class="new-text">利凌前進2021智慧城市展
+                    首次亮相多款AI攝影機<p>2021.03.15</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--support-->
+    <div class="gradual-bg">
+        <div class="width-middle">
+            <div class="support">
+                <div class="support-item">
+                    <img src="images/index/svg/ic-knowledge.svg"><span class="pt">知識庫<br>knowledge</span>
+                </div>
+                <div class="support-item">
+                    <img src="images/index/svg/ic-support.svg"><span class="pt">技術支援<br>support</span>
+                </div>
+                <div class="support-item">
+                    <img src="images/index/svg/ic-contact.svg"><span class="pt">聯絡我們<br>Contact</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="black-bg padding-small">
+            <div class="width-middle">
+                <div class="footer-list">
+                    <ul>
+                        <li><a href="about.html">About LILIN</a></li>
+                        <li>|</li>
+                        <li><a href="index.html#contact-us">Contact US</a></li>
+                        <li>|</li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                        <li>|</li>
+                        <li><a href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&amp;j=4c3a426b485c3f6848683a1d1d1d1d5f2443a363189j99"
+                                target="_blank">Recruit</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-right-content">
+                    <div class="language-wrapper">
+                        <div id="quickmenu_container"
+                            style="position:absolute; z-index:2; width:135px; height:36px; overflow:hidden;">
+                            <div id="btn_quickmenu" style="width:135px;height:36px;" class="hide"><a
+                                    href="javascript:;"><img id="Image3" src="images/icons/shortcuts_btn.jpg"
+                                        name="Image3" width="135" height="36" border="0"></a></div>
+                            <div id="quickmenu_content"
+                                style=" background-color:#ffffff; border-left:1px solid #939393;border-right:1px solid #939393; margin:0px;">
+                                <ul>
+                                    <li><a href="javascript:;">繁體中文</a></li>
+                                    <li><a href="javascript:;">English</a></li>
+                                    <li><a href="javascript:;">简体中文</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="share-icon">
+                        <ul>
+                            <li><a href="#"><img src="images/icons/twitter.png" alt=""></a></li>
+                            <li><a href="#"><img src="images/icons/fb.png" alt=""></a></li>
+                            <li><a href="#"><img src="images/icons/ig.png" alt=""></a></li>
+                            <li><a href="#"><img src="images/icons/youtu.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--手機選單-->
+    <div id="mySidebar" class="sidebar">
+        <div class="slide">
+            <div class="item">
+                <div class="second-list-btn dropdown-btn">
+                    <p>Products</p>
+                    <div class="second-list-icon02"><img src="images/icons/pro_left03.png" alt="" class="close">
+                        <img src="images/icons/pro_down02.png" alt="" class="open">
+                    </div>
+                </div>
+                <div class="second-list dropdown-container">
+                    <ul>
+                        <ul>
+                            <li><a href="product.html">IP Cameras</a></li>
+                            <li><a href="product.html">NVRs</a></li>
+                            <li><a href="product.html">Encoders &amp; Decoders</a></li>
+                            <li><a href="product.html">Video Management Platform</a></li>
+                            <li><a href="product.html">AHD Series</a></li>
+                            <li><a href="product.html">Analogue Cameras</a></li>
+                            <li><a href="product.html">DVRs</a></li>
+                            <li><a href="product.html">Accessories</a></li>
+                            <li><a href="product.html">End of Life Products</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div class="second-list-btn dropdown-btn">
+                    <p><a href="javascript:;">Solutions</a></p>
+                    <div class="second-list-icon02"><img src="images/icons/pro_left03.png" alt="" class="close"><img
+                            src="images/icons/pro_down02.png" alt="" class="open"></div>
+                </div>
+                <div class="second-list dropdown-container">
+                    <ul>
+                        <li><a href="solution-d.html">Campus Video Solution</a></li>
+                        <li><a href="solution-d.html">Digital Home Solution</a></li>
+                        <li><a href="solution-d.html">Retail Solution</a></li>
+                        <li><a href="solution-d.html">Bank Solution</a></li>
+                        <li><a href="solution-d.html">Central Monitoring Solution</a></li>
+                        <li><a href="solution-d.html">Low Bandwidth Mode</a></li>
+                        <li><a href="solution-d.html">ANPR License Plate Recognition</a></li>
+                        <li><a href="solution-d.html">Hotel Solution</a></li>
+                        <li><a href="solution-d.html">Casino Security Solutions</a></li>
+                        <li><a href="solution-d.html">Baggage Claim / Production Line Solutions</a></li>
+                        <li><a href="solution-d.html">Public Transport Security Solutions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div class="second-list-btn dropdown-btn">
+                    <p><a href="javascript:;">News</a></p>
+                    <div class="second-list-icon02"><img src="images/icons/pro_left03.png" alt="" class="close"><img
+                            src="images/icons/pro_down02.png" alt="" class="open"></div>
+                </div>
+                <div class="second-list dropdown-container">
+                    <ul>
+                        <li><a href="news.html">NEWS</a></li>
+                        <li><a href="news.html">Case Studies</a></li>
+                        <li><a href="news.html">Events</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div class="second-list-btn dropdown-btn">
+                    <p><a href="javascript:;">Support</a></p>
+                    <div class="second-list-icon02"><img src="images/icons/pro_left03.png" alt="" class="close"><img
+                            src="images/icons/pro_down02.png" alt="" class="open"></div>
+                </div>
+                <div class="second-list dropdown-container">
+                    <ul>
+                        <li><a href="support.html">Design Tool</a></li>
+                        <li><a href="support.html">Technical Support</a></li>
+                        <li><a href="support.html">Video</a></li>
+                        <li><a href="support.html">Downloads</a></li>
+                        <li><a href="support.html">Product Demonstration</a></li>
+                        <li><a href="support.html">Technical Request</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div class="second-list-btn dropdown-btn">
+                    <p><a href="javascript:;">Partners</a></p>
+                    <div class="second-list-icon02"><img src="images/icons/pro_left03.png" alt="" class="close"><img
+                            src="images/icons/pro_down02.png" alt="" class="open"></div>
+                </div>
+                <div class="second-list dropdown-container">
+                    <ul>
+                        <li><a href="partner-program-d.html">Partner Program</a></li>
+                        <li><a href="software-partner-d.html">Software Partners</a></li>
+                        <li><a href="automation-partner-d.html">Home Automation Partners</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div class="second-list-btn">
+                    <p><a href="global.html">Global Distribution</a></p>
+                    <div class="second-list-icon02"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/vendor.js"></script>
+    <script src="scripts/plugins.js"></script>
+    <script src="scripts/by-map.js"></script>
+    <script src="scripts/pace.js"></script>
+    <script src="scripts/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="scripts/jquery.tabber.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/nav.js"></script>
+    <script src="scripts/jquery-3.6.0.js"></script>
+
+    <!--banner-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.min.js"></script>
+    <script>
+        // once everything is loaded, we run our Three.js stuff.
+        $(function () {
+
+            var stats = initStats();
+
+            // create a scene, that will hold all our elements such as objects, cameras and lights.
+            var scene = new THREE.Scene();
+
+            // create a camera, which defines where we're looking at.
+            var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+            // create a render and set the size
+            var webGLRenderer = new THREE.WebGLRenderer();
+            webGLRenderer.setClearColor(new THREE.Color(0x000000, 1.0));
+            webGLRenderer.setSize(window.innerWidth, window.innerHeight);
+            webGLRenderer.shadowMapEnabled = true;
+
+
+            // position and point the camera to the center of the scene
+            camera.position.x = -30;
+            camera.position.y = 40;
+            camera.position.z = 50;
+            camera.lookAt(new THREE.Vector3(10, 0, 0));
+
+            // add the output of the renderer to the html element
+            $("#WebGL-output").append(webGLRenderer.domElement);
+
+            // call the render function
+            var step = 0;
+
+            var knot;
+
+            // setup the control gui
+            var controls = new function () {
+                // we need the first child, since it's a multimaterial
+                this.radius = 40;
+                this.tube = 28.2;
+                this.radialSegments = 600;
+                this.tubularSegments = 12;
+                this.p = 5;
+                this.q = 4;
+                this.heightScale = 4;
+                this.asParticles = true;
+                this.rotate = true;
+
+                this.redraw = function () {
+                    // remove the old plane
+                    if (knot) scene.remove(knot);
+                    // create a new one
+                    var geom = new THREE.TorusKnotGeometry(controls.radius, controls.tube, Math.round(controls.radialSegments), Math.round(controls.tubularSegments), Math.round(controls.p), Math.round(controls.q), controls.heightScale);
+
+                    if (controls.asParticles) {
+                        knot = createParticleSystem(geom);
+                    } else {
+                        knot = createMesh(geom);
+                    }
+
+                    // add it to the scene.
+                    scene.add(knot);
+                };
+
+            }
+
+            var gui = new dat.GUI();
+            gui.add(controls, 'radius', 0, 40).onChange(controls.redraw);
+            gui.add(controls, 'tube', 0, 40).onChange(controls.redraw);
+            gui.add(controls, 'radialSegments', 0, 400).step(1).onChange(controls.redraw);
+            gui.add(controls, 'tubularSegments', 1, 20).step(1).onChange(controls.redraw);
+            gui.add(controls, 'p', 1, 10).step(1).onChange(controls.redraw);
+            gui.add(controls, 'q', 1, 15).step(1).onChange(controls.redraw);
+            gui.add(controls, 'heightScale', 0, 5).onChange(controls.redraw);
+            gui.add(controls, 'asParticles').onChange(controls.redraw);
+            gui.add(controls, 'rotate').onChange(controls.redraw);
+
+            gui.close();
+
+            controls.redraw();
+
+            render();
+
+            // from THREE.js examples
+            function generateSprite() {
+
+                var canvas = document.createElement('canvas');
+                canvas.width = 16;
+                canvas.height = 16;
+
+                var context = canvas.getContext('2d');
+                var gradient = context.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2);
+                gradient.addColorStop(0, 'rgba(255,255,255,1)');
+                gradient.addColorStop(0.2, 'rgba(0,255,255,1)');
+                gradient.addColorStop(0.4, 'rgba(0,0,64,1)');
+                gradient.addColorStop(1, 'rgba(0,0,0,1)');
+
+                context.fillStyle = gradient;
+                context.fillRect(0, 0, canvas.width, canvas.height);
+
+                var texture = new THREE.Texture(canvas);
+                texture.needsUpdate = true;
+                return texture;
+
+            }
+
+            function createParticleSystem(geom) {
+                var material = new THREE.ParticleBasicMaterial({
+                    color: 0xffffff,
+                    size: 3,
+                    transparent: true,
+                    blending: THREE.AdditiveBlending,
+                    map: generateSprite()
+                });
+
+                var system = new THREE.ParticleSystem(geom, material);
+                system.sortParticles = true;
+                return system;
+            }
+
+            function createMesh(geom) {
+
+                // assign two materials
+                var meshMaterial = new THREE.MeshNormalMaterial({});
+                meshMaterial.side = THREE.DoubleSide;
+
+                // create a multimaterial
+                var mesh = THREE.SceneUtils.createMultiMaterialObject(geom, [meshMaterial]);
+
+                return mesh;
+            }
+
+            function render() {
+                stats.update();
+
+                if (controls.rotate) {
+                    knot.rotation.y = step += 0.01;
+                }
+
+                // render using requestAnimationFrame
+                requestAnimationFrame(render);
+                webGLRenderer.render(scene, camera);
+            }
+
+            function initStats() {
+
+                var stats = new Stats();
+                stats.setMode(0); // 0: fps, 1: ms
+
+                // Align top-left
+                stats.domElement.style.position = 'absolute';
+                stats.domElement.style.left = '0px';
+                stats.domElement.style.top = '0px';
+
+                $("#Stats-output").append(stats.domElement);
+
+                return stats;
+            }
+        });
+    </script>
+    <!--products-->
+    <script>
+        function openDetailsPanel($this) {
+            /*
+            ** To prevent page jump up to top, if body was set 'overflow: hidden;'.
+            */
+
+            // 1-1 First, let's get the current page scroll position(Y).
+            scrollPosition = window.pageYOffset;
+            // console.log('scrollPosition' + scrollPosition); // For debug
+
+            // 1-2 Save position value into body's data attribute
+            $('body').attr('data-scroll-pos', scrollPosition);
+
+            // 1-3 If menu have not active, add classes to make CSS open it.
+            $('body').addClass('details-panel-opened');
+
+
+            /*
+            ** To prevent body scroll when '.details' panel opened.
+            */
+
+            // Get the breakpoint value
+            const mq = window.matchMedia('(max-width: 1599px)');
+
+
+            // Use condition to decide trigger 'bodyScrollLock.js' or not
+            if (mq.matches) {
+                // console.log('Screen is smaller than 1599px.');
+
+                // 1-1 For using this plugin, we need to use '.get(0)' to convert jquery object to dom element
+                const bslTargetElement = $this.parents().next().next('.details').get(0);
+                // console.log('Body scroll behavior is disable now but exclude this element:' + bslTargetElement);
+
+                // 1-2 Lock body scroll behavior.
+                bodyScrollLock.disableBodyScroll(bslTargetElement);
+            }
+        }
+
+
+        function closeDetailsPanel() {
+            // 1-1 Deactivate panel's 'active' status
+            $('[data-simple-target]').removeClass('active');
+
+            // 1-2 Remove added classes by function: 'openDetailsPanel()' to close menu.
+            $('body').removeClass('details-panel-opened');
+
+            // 2-1 Get the position value saved by function: 'openDetailsPanel()'
+            var backToPosition = $('body').attr('data-scroll-pos');
+            // console.log('backToPosition' + backToPosition); // For debug
+
+            // 2-2 Then, scroll back to the position(Y) we have got above.
+            $(window).scrollTop(backToPosition);
+
+            // 2-3 Reset position value
+            $('body').removeAttr('data-scroll-pos');
+
+            // 3-1 Unlock body scroll behavior.
+            bodyScrollLock.clearAllBodyScrollLocks();
+        }
+
+
+
+        // [RWD] Fluid Information Panel - Open
+        $('.trigger-btn label').click(function () {
+            openDetailsPanel($(this));
+        });
+
+
+
+
+        // [RWD] Fluid Information Panel - Close
+        $('*').click(function () {
+
+            if ($(this).is('.trigger-btn label') || $(this).is('.landscape-thumb')) {
+
+                event.stopPropagation(); // Prevent event bubbling to trigger panel open/close.
+                // console.log('This is Panel Btn');
+
+            } else if ($('body').hasClass('details-panel-opened')) {
+
+                closeDetailsPanel();
+
+            }
+        });
+    </script>
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        //一般呼叫
+        $(function () {
+            AOS.init();
+        })
+        //自定參數呼叫
+        $(function () {
+            AOS.init({
+                offset: 100,
+                easing: 'ease-in-sine'
+            });
+        })
+    </script>
+
+</body>
+
+</html>

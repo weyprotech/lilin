@@ -21,183 +21,228 @@
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/nav.css">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/product-d.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    #one-table::before {
+      margin-top: 50px;
+      content: '';
+      display: block;
+    }
+
+    .back-top {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      margin: 10px;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      color: #FFFFFF;
+      text-align: center;
+      text-decoration: none;
+      line-height: 30px;
+      background: rgba(0, 0, 0, .4);
+    }
+
+    .back-top:hover {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    .back-top:active {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    .back-top:focus {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
   <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-  <nav id="navigation">
-    <div id="cd-vertical-nav" class="width-middle">
+  <nav id="navigation" class="nav-menu">
+    <div class="nav-top">
+      <a href="#" target="_blank">
+        <div><img src="images/index/svg/icon_facebook.svg"></div>
+      </a>
+      <a href="#" target="_blank">
+        <div><img src="images/index/svg/icon_youtube.svg"></div>
+      </a>
+      <a href="#" target="_blank">
+        <div><img src="images/index/svg/icon_twitter.svg"></div>
+      </a>
+      <a href="#" target="_blank">
+        <div><img src="images/index/svg/icon_linkedin.svg"></div>
+      </a>
+      <div><img src="images/index/svg/globalization.svg"></div>
+    </div>
+    <div id="cd-vertical-nav" class="cd-vertical-nav-middle">
       <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
       <div class="list-content">
         <div class="search">
           <input type="text" placeholder="Search" class="search-form">
           <div class="btn"><a href="search.html"><img src="images/icons/search-icon.png" alt=""></a></div>
         </div>
-        <div class="menu">
-          <ul>
-            <li><a href="product.html" class="list-btn">Products</a>
-              <ul>
-                <li><a href="#">IP Cameras</a>
-                  <ul>
-                    <li><a href="#">- L Series IP Camera</a></li>
-                    <li><a href="#">- M Series IP Camera</a></li>
-                    <li><a href="#">- Z Series IP Camera</a></li>
-                    <li><a href="#">- Pro Series IP Camera</a></li>
-                    <li><a href="#">- S Series IP Camera</a></li>
-                    <li><a href="#">- Ultra Series IP Camera</a></li>
-                    <li><a href="#">- IVS Series IP Camera</a></li>
-                    <li><a href="#">- PTZ Dome IP Camera</a></li>
-                    <li><a href="#">- Panoramic IP Camera</a></li>
-                    <li><a href="#">- Covert Series IP Cameras</a></li>
-                    <li><a href="#">- Door Station</a></li>
+        <div id="primary_nav_wrap">
+          <ul class="level-one">
+            <li class="dir"><a href="product.html">Products</a>
+              <ul class="level-two">
+                <li class="dir"><a href="#">IP Cameras</a>
+                  <ul class="level-three">
+                    <li>IP Cameras</li>
+                    <div class="nav-sub-menu">
+                      <div>
+                        <li><a href="#">- M Series IP Camera</a></li>
+                        <li><a href="#">- Z Series IP Camera</a></li>
+                        <li><a href="#">- L Series IP Camera </a></li>
+                        <li><a href="#">- M Series IP Camera</a></li>
+                        <li><a href="#">- Z Series IP Camera</a></li>
+                        <li><a href="#">- Pro Series IP Camera</a></li>
+                      </div>
+                      <div>
+                        <li><a href="#">- Z Series IP Camera</a></li>
+                        <li><a href="#">- Pro Series IP Camera</a></li>
+                        <li><a href="#">- L Series IP Camera </a></li>
+                      </div>
+
+                      <div>
+                        <li><a href="#">- L Series IP Camera </a></li>
+                        <li><a href="#">- Z Series IP Camera</a></li>
+                        <li><a href="#">- Pro Series IP Camera</a></li>
+                      </div>
+                    </div>
                   </ul>
                 </li>
-                <li><a href="#">NVRs</a>
+                <li class="dir"><a href="#">NVRs</a>
                   <ul>
-                    <li><a href="#">- NVR Touch Series</a></li>
-                    <li><a href="#">- NVR L Series</a></li>
-                    <li><a href="#">- NAV Recorder</a></li>
+                    <li>NVRs</li>
+                    <div class="nav-sub-menu">
+                      <div>
+                        <li><a href="#">- L Series IP Camera </a></li>
+                        <li><a href="#">- M Series IP Camera</a></li>
+                        <li><a href="#">- Z Series IP Camera</a></li>
+                        <li><a href="#">- Pro Series IP Camera</a></li>
+                      </div>
+                      <div>
+                        <li><a href="#">- L Series IP Camera </a></li>
+                        <li><a href="#">- M Series IP Camera</a></li>
+                        <li><a href="#">- Z Series IP Camera</a></li>
+                        <li><a href="#">- Pro Series IP Camera</a></li>
+                      </div>
+                      <div>
+                        <li><a href="#">- L Series IP Camera </a></li>
+                        <li><a href="#">- M Series IP Camera</a></li>
+                        <li><a href="#">- Z Series IP Camera</a></li>
+                        <li><a href="#">- Pro Series IP Camera</a></li>
+                      </div>
+                    </div>
                   </ul>
                 </li>
-                <li><a href="#">Encoders &amp; Decoders</a>
-                  <ul>
-                    <li><a href="#">- Video Encoder</a></li>
-                    <li><a href="#">- Video Decoder</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Video Management Platform</a>
-                  <ul>
-                    <li><a href="#">- Navigator Software</a></li>
-                    <li><a href="#">- ANPR Software</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">AHD Series</a>
-                  <ul>
-                    <li><a href="#">- AHD Camera</a></li>
-                    <li><a href="#">- AHD DVR</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Analogue Cameras</a>
-                  <ul>
-                    <li><a href="#">- 700TVL Camera</a></li>
-                    <li><a href="#">- 600TVL Camera</a></li>
-                    <li><a href="#">- 540TVL Camera</a></li>
-                    <li><a href="#">- 420TVL Camera</a></li>
-                    <li><a href="#">- PTZ Camera</a></li>
-                    <li><a href="#">- Panoramic Camera</a></li>
-                    <li><a href="#">- ES Series Camera</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">DVRs</a>
-                  <ul>
-                    <li><a href="#">- 7 Series DVR</a></li>
-                    <li><a href="#">- 8 Series DVR</a></li>
-                    <li><a href="#">- Hybrid DVR</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Accessories</a>
-                  <ul>
-                    <li><a href="#">- POE</a></li>
-                    <li><a href="#">- Housing</a></li>
-                    <li><a href="#">- Bracket</a></li>
-                    <li><a href="#">- Infrared Illuminator</a></li>
-                    <li><a href="#">- Keyboard</a></li>
-                    <li><a href="#">- Matrix</a></li>
-                    <li><a href="#">- Scanner</a></li>
-                    <li><a href="#">- Others</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">End of Life Products</a>
-                  <ul>
-                    <li><a href="#">- Cameras</a></li>
-                    <li><a href="#">- Video Recorder</a></li>
-                    <li><a href="#">- Others</a></li>
-                  </ul>
-                </li>
-                <li><a href="product-selector.html">Product Selector</a></li>
+                <li><a href="#">Encoders & Decoders</a></li>
+                <li><a href="#">Video Management Platform</a></li>
+                <li><a href="#">AHD Series</a></li>
+                <li><a href="#">Analogue Cameras</a></li>
+                <li><a href="#">DVRs</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">End of Life Products</a></li>
+                <li><a href="#">Product Selector</a></li>
               </ul>
             </li>
-            <li><a href="solutions.html" class="list-btn02">Solutions</a>
-              <ul>
-                <li><a href="solution-d.html">Campus Video Solution</a></li>
-                <li><a href="solution-d.html">Digital Home Solution</a></li>
-                <li><a href="solution-d.html">Retail Solution</a></li>
-                <li><a href="solution-d.html">Bank Solution</a></li>
-                <li><a href="solution-d.html">Central Monitoring Solution</a></li>
-                <li><a href="solution-d.html">Low Bandwidth Mode</a></li>
-                <li><a href="solution-d.html">ANPR License Plate Recognition</a></li>
-                <li><a href="solution-d.html">Hotel Solution</a></li>
-                <li><a href="solution-d.html">Casino Security Solutions</a></li>
-                <li><a href="solution-d.html">Baggage Claim / Production Line Solutions</a></li>
-                <li><a href="solution-d.html">Public Transport Security Solutions</a></li>
+            <li><a href="solutions.html">Solutions</a>
+              <ul class="level-two">
+                <li class="dir"><a href="#">IP Cameras</a>
+                  <ul class="level-three">
+                    <li>Solutions</li>
+                    <div class="nav-sub-menu">
+                      <div>
+                        <li><a href="#">- Z Series IP Camera</a></li>
+                        <li><a href="#">- Pro Series IP Camera</a></li>
+                        <li><a href="#">- L Series IP Camera </a></li>
+                      </div>
+                      <div>
+                        <li><a href="#">- M Series IP Camera</a></li>
+                        <li><a href="#">- Z Series IP Camera</a></li>
+                        <li><a href="#">- L Series IP Camera </a></li>
+                        <li><a href="#">- M Series IP Camera</a></li>
+                        <li><a href="#">- Z Series IP Camera</a></li>
+                        <li><a href="#">- Pro Series IP Camera</a></li>
+                      </div>
+                      <div>
+                        <li><a href="#">- L Series IP Camera </a></li>
+                        <li><a href="#">- Z Series IP Camera</a></li>
+                        <li><a href="#">- Pro Series IP Camera</a></li>
+                      </div>
+                    </div>
+                  </ul>
+                </li>
+                <li class="dir"><a href="#">NVRs</a>
+                  <ul>
+                    <li>NVRs111</li>
+                    <div class="nav-sub-menu">
+                      <div>
+                        <li><a href="#">- L Series IP Camera </a></li>
+                        <li><a href="#">- M Series IP Camera</a></li>
+                        <li><a href="#">- Z Series IP Camera</a></li>
+                        <li><a href="#">- Pro Series IP Camera</a></li>
+                      </div>
+                      <div>
+                        <li><a href="#">- L Series IP Camera </a></li>
+                        <li><a href="#">- M Series IP Camera</a></li>
+                        <li><a href="#">- Z Series IP Camera</a></li>
+                        <li><a href="#">- Pro Series IP Camera</a></li>
+                      </div>
+                      <div>
+                        <li><a href="#">- L Series IP Camera </a></li>
+                        <li><a href="#">- M Series IP Camera</a></li>
+                        <li><a href="#">- Z Series IP Camera</a></li>
+                        <li><a href="#">- Pro Series IP Camera</a></li>
+                      </div>
+                    </div>
+                  </ul>
+                </li>
+                <li><a href="#">Encoders & Decoders</a></li>
+                <li><a href="#">Video Management Platform</a></li>
+                <li><a href="#">AHD Series</a></li>
+                <li><a href="#">Analogue Cameras</a></li>
+                <li><a href="#">DVRs</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">End of Life Products</a></li>
+                <li><a href="#">Product Selector</a></li>
               </ul>
             </li>
-            <li><a href="news.html" class="list-btn03">News</a>
+            <li><a href="news.html">News</a>
               <ul>
-                <li><a href="news.html">News</a></li>
-                <li><a href="news.html">Case Studies</a></li>
-                <li><a href="news.html">Events</a></li>
+                <li><a href="#">Sub Menu 1</a></li>
+                <li><a href="#">Sub Menu 2</a></li>
+                <li><a href="#">Sub Menu 3</a></li>
               </ul>
             </li>
-            <li><a href="support.html" class="list-btn04">Support</a>
+            <li><a href="support.html">Supports</a>
               <ul>
-                <li><a href="support.html">Design Tool</a>
+                <li class="dir"><a href="#">Sub Menu 1</a></li>
+                <li class="dir"><a href="#">Sub Menu 2 THIS IS SO LONG IT MIGHT CAUSE AN ISSEUE BUT MAYBE NOT?</a>
                   <ul>
-                    <li><a href="project-planner.html"> - Project Planner</a></li>
-                    <li><a href="bandwidth-storage-calculator.html"> - Bandwidth and Storage
-                        Calculator</a></li>
-                    <li><a href="AHD.html"> - AHD Video Recorder Storage Calculator</a></li>
-                    <li><a href="camera-resolution-calculator.html"> - Camera Resolution
-                        Calculator</a></li>
-                    <li><a href="RAID.html"> - RAID Calculator</a></li>
+                    <li><a href="#">Category 1</a></li>
+                    <li><a href="#">Category 2</a></li>
+                    <li><a href="#">Category 3</a></li>
+                    <li><a href="#">Category 4</a></li>
+                    <li><a href="#">Category 5</a></li>
                   </ul>
                 </li>
-                <li><a href="support.html">Technical Support</a>
-                  <ul>
-                    <li><a href="knowledge-base.html"> - Knowledge Base</a></li>
-                    <li><a href="DDNS-Service.html"> - DDNS Service </a></li>
-                  </ul>
-                </li>
-                <li><a href="support.html">Video</a>
-                  <ul>
-                    <li><a href="video.html"> - Product Videos</a></li>
-                    <li><a href="video.html"> - Tutorial Videos</a></li>
-                    <li><a href="video.html"> - News Videos</a></li>
-                  </ul>
-                </li>
-                <li><a href="support.html">Downloads</a>
-                  <ul>
-                    <li><a href="downloads.html"> - software</a></li>
-                    <li><a href="downloads.html"> - Catalog</a></li>
-                    <li><a href="downloads.html"> - International Technology Answers</a></li>
-                    <li><a href="downloads.html"> - Application Problems</a></li>
-                    <li><a href="downloads.html"> - Product specification file</a></li>
-                    <li><a href="downloads.html"> - Development Kit</a></li>
-                    <li><a href="downloads.html"> - Brand Media</a></li>
-                  </ul>
-                </li>
-                <li><a href="support.html">Product Demonstration</a>
-                  <ul>
-                    <li><a href="product-demostration.html"> - Product Demonstration</a></li>
-                  </ul>
-                </li>
-                <li><a href="support.html">Technical Request</a>
-                  <ul>
-                    <li><a href="technical-request.html"> - Technical Request</a></li>
-                  </ul>
-                </li>
+                <li><a href="#">Sub Menu 3</a></li>
+                <li><a href="#">Sub Menu 4</a></li>
+                <li><a href="#">Sub Menu 5</a></li>
               </ul>
             </li>
-            <li><a href="partners.html" class="list-btn05">Partners</a>
-              <ul>
-                <li><a href="partner-program-d.html">Partner Program</a></li>
-                <li><a href="software-partner-d.html">Software Partners</a></li>
-                <li><a href="automation-partner-d.html">Home Automation Partners</a></li>
-              </ul>
-            </li>
-            <li><a href="global.html">Global Distribution</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="global.html">Content Us</a></li>
           </ul>
         </div>
       </div>
@@ -211,28 +256,34 @@
   </nav>
   <div id="sb-site">
     <div id="wrapper">
-      <div id="header" class="width-middle">
-        <div class="pro-header">
-          <h1>PRODUCTS</h1>
-        </div>
+      <div id="header">
+        <div
+          style="background-image: url('https://www.meritlilin.com/assets/images/in-page/banner/product-banner-p.jpg')"
+          class="banner-inpage"></div>
       </div>
-      <div id="main" class="black-bg">
+      <div id="main" class="white-bg">
         <div class="width-middle padding-small">
           <div class="title-wrapper">
             <div class="big-title">
-              <h1 class="red">PRODUCTS</h1>
+              <h1 class="red">Products</h1>
             </div>
-            <div class="bread-crumbs"><a href="index.html">Home</a> /
+            <div class="bread-crumbs">
+              <a href="index.html">Home</a> /
               Products
               /
               IP Cameras
               /
               L Series IP Camera
-              /<span>LB1022X </span>
+              /LB1022X
+              <h6 class="red">4K Day & Night IP Box Camera</h6>
             </div>
           </div>
           <div class="content-wrapper">
             <div class="product-detial">
+              <div class="title">
+                <h2 class="text-red">Day & Night 1080P HD IP Camera</h2>
+                <p class="block">Model：LB1022X</p>
+              </div>
               <div class="product-slider">
                 <ul class="bxslider_product">
                   <li><img src="images/in-page/product/product-d-p.png" alt=""></li>
@@ -241,512 +292,567 @@
                   <li><img src="images/in-page/product/product-d-p.png" alt=""></li>
                 </ul>
               </div>
-              <div class="title">
-                <h2 class="text-green">Day & Night 1080P HD IP Camera</h2>
-                <p class="block">Model：LB1022X</p>
-              </div>
-              <div class="product-btn border-bottom">
-                <div class="share">
-                  <select class="share-select">
-                    <option value="share">share</option>
-                    <option value="Facebook">Facebook</option>
-                    <option value="Tiwtter">Tiwtter</option>
-                    <option value="IG">IG</option>
-                  </select>
+              <!---->
+
+              <div class="warpper">
+                <input class="radio" id="one" name="group" type="radio">
+                <input class="radio" id="two" name="group" type="radio">
+                <input class="radio" id="three" name="group" type="radio" checked>
+                <input class="radio" id="four" name="group" type="radio">
+                <input class="radio" id="five" name="group" type="radio">
+                <div class="tabs">
+                  <label class="tab" id="one-tab" for="one">Features</label>
+                  <label class="tab" id="two-tab" for="two">Description</label>
+                  <label class="tab" id="three-tab" for="three">Specifications</label>
+                  <label class="tab" id="four-tab" for="four">Downloads</label>
+                  <label class="tab" id="five-tab" for="five">Accessories</label>
                 </div>
-                <div class="export-pdf grayline-garytext-btn"><a href="#">Export-PDF</a></div>
-                <div class="back"><a href="product.html">
-                    <div class="back-btn">
-                      <div class="back-icons"></div>
-                      <div class="back-text">Back</div>
-                    </div>
-                  </a></div>
-                <div class="contact-us grayline-garytext-btn"><a href="index.html#contact-us">Contact Us</a></div>
-              </div>
-              <div class="description-wrap">
-                <div class="features">
-                  <h4 class="text-green">Features</h4>
-                  <p>• Full HD 2 megapixel CMOS image sensor<br> • True H.264 AVC/MPEG-4 part 10<br> • H.264 and Motion
-                    JPEG triple video streaming<br> • 3D noise reduction (MCTF)<br> • 2D WDR function<br> • Digital zoom
-                    supported<br> • Audio / Motion detection alarm function<br> • Day & Night (IR cut removable)<br> •
-                    2-way audio supported<br> • Digital I/O : 1 in, 1 out<br> • ONVIF supported</p>
-                </div>
-                <div class="description">
-                  <h4 class="text-green">Description</h4>
-                  <p>
-                    LB1022X in the L series is featuring built-in Sense Up+ technology to deliver stunning video in
-                    low-light conditions.
-                    Utilizing intelligent image signal processing, 2D WDR function, AGC control, and 3D noise reduction,
-                    the combination
-                    successfully delivers the ultimate low-light image without motion blur.<br> With built-in IR-cut
-                    filter, white balance, back light compensation, and IVS features such as audio and motion detection.
-                    Featuring a high-end feature such as Micro SD/SDHC card slot for data redundancy. The LB1022X camera
-                    is the ideal choice
-                    for the most demanding monitoring applications, and it can secure a variety of sites.
-                  </p>
-                </div>
-              </div>
-              <div class="product-text">
-                <div class="open">
-                  <div style="cursor:pointer;" data-href="#tr1" class="qa">
-                    <p><span class="open thisone_text">Specifications</span></p>
-                    <div class="qa-icon"><img src="images/icons/pro_left.png" alt="" class="thisicon thisone_img"></div>
-                  </div>
-                  <div id="tr1" style="display: none;" class="trclass">
-                    <div class="product-category">
-                      <input id="radio" type="radio" name="radio" value="radio">LB1022EX3
-                      <input id="radio" type="radio" name="radio" value="radio" checked=""><span
-                        class="text-green">LB1022EX5</span>
-                    </div>
-                    <div class="table-pro">
-                      <div class="table-list">
-                        <ul>
-                          <li>- 分類標題1</li>
-                          <li>- 分類標題2</li>
-                          <li>- 分類標題3</li>
-                          <li>- 分類標題4</li>
-                          <li>- 分類標題5</li>
-                          <li>- 分類標題6</li>
-                        </ul>
+
+                <div class="panels">
+                  <div class="panel" id="one-panel">
+                    <div class="panel-main">
+                      <div>
+                        <p>• Full HD 2 megapixel CMOS image sensor<br> • True H.264
+                          AVC/MPEG-4 part 10<br> • H.264 and
+                          Motion
+                          JPEG triple video streaming<br> • 3D noise reduction (MCTF)<br>
+                          • 2D WDR function</p>
                       </div>
-                      <div class="table-wrap">
+                      <div>
+                        <p>
+                          • Digital zoom supported<br> • Audio / Motion detection alarm
+                          function<br> • Day & Night (IR
+                          cut
+                          removable)<br> •
+                          2-way audio supported<br> • Digital I/O : 1 in, 1 out<br> •
+                          ONVIF supported
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel" id="two-panel">
+                    <div class="panel-main">
+                      <p>
+                        LB1022X in the L series is featuring built-in Sense Up+
+                        technology to deliver stunning video
+                        in
+                        low-light conditions.
+                        Utilizing intelligent image signal processing, 2D WDR function,
+                        AGC control, and 3D noise
+                        reduction,
+                        the combination
+                        successfully delivers the ultimate low-light image without
+                        motion blur.<br> With built-in
+                        IR-cut
+                        filter, white balance, back light compensation, and IVS features
+                        such as audio and motion
+                        detection.
+                        Featuring a high-end feature such as Micro SD/SDHC card slot for
+                        data redundancy. The
+                        LB1022X camera
+                        is the ideal choice
+                        for the most demanding monitoring applications, and it can
+                        secure a variety of sites.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="panel" id="three-panel">
+                    <div class="tabset">
+                      <!-- Tab 1 -->
+                      <input type="radio" name="tabset" id="tab1" checked>
+                      <label for="tab1">UHG1182E</label>
+                      <!-- Tab 2 -->
+                      <input type="radio" name="tabset" id="tab2">
+                      <label for="tab2">UHG1182E</label>
+
+                      <div class="tab-panels">
+                        <section id="tab1" class="tab-panel">
+                          <div class="tab-inner-table">
+                            <div id="getFixed" class="specifications-tab">
+                              <a id="onelinkc" class="tab-linkc">Video
+                                performance</a>
+                              <a id="twolinkc" class="tab-linkc">Power</a>
+                              <a id="threelinkc" class="tab-linkc">Sensor</a>
+                              <a id="fourlinkc" class="tab-linkc">Certifications</a>
+                              <a id="fivelinkc" class="tab-linkc">Environmental</a>
+                              <a id="sixlinkc" class="tab-linkc">PC requirement</a>
+                            </div>
+                            <div class="tabcontent">
+                              <div id="onetable">
+                                <h3>Video performance</h3>
+                                <div class="table">
+                                  <p>Model#</p>
+                                  <p>UHG1182E</p>
+                                </div>
+                                <div class="table">
+                                  <p>Low Light Mode
+                                  </p>
+                                  <p>0.5 Lux at F1.2 (Color);0.1 Lux at F1.2 (B/W)</p>
+                                </div>
+                                <div class="table">
+                                  <p>With Infrared</p>
+                                  <p>0.0 lux</p>
+                                </div>
+                                <div class="table">
+                                  <p>2D WDR</p>
+                                  <p>Off / Auto / x2 / x3/ x4 (by normal mode)
+                                  </p>
+                                </div>
+                              </div>
+                              <div id="twotable">
+                                <h3>Power</h3>
+                                <div class="table">
+                                  <p>Power consumption</p>
+                                  <p>DC12V, 7.2W / PoE, 8W</p>
+                                </div>
+                                <div class="table">
+                                  <p>PoE</p>
+                                  <p>IEEE802.3af</p>
+                                </div>
+                                <div class="table">
+                                  <p>Power supply
+                                  </p>
+                                  <p>DC12V ±10%<br>Power over Ethernet (IEEE 802.3af compliant)
+                                  </p>
+                                </div>
+                              </div>
+                              <div id="threetable">
+                                <h3>Sensor</h3>
+                                <div class="table">
+                                  <p>Sensor type</p>
+                                  <p>1/2.3-inch CMOS</p>
+                                </div>
+                                <div class="table">
+                                  <p>Total sensor pixels</p>
+                                  <p>4072 (H) x 3046 (V) = 12,403,312 pixels</p>
+                                </div>
+                                <div class="table">
+                                  <p>With Infrared</p>
+                                  <p>0.0 lux</p>
+                                </div>
+                                <div class="table">
+                                  <p>2D WDR</p>
+                                  <p>Off / Auto / x2 / x3/ x4 (by normal mode)
+                                  </p>
+                                </div>
+                              </div>
+                              <div id="fourtable">
+                                <h3>Certifications
+                                </h3>
+                                <div class="table">
+                                  <p>CE</p>
+                                  <p>Yes, EMI CLASS A</p>
+                                </div>
+                                <div class="table">
+                                  <p>FCC</p>
+                                  <p>Yes, EMI CLASS A</p>
+                                </div>
+                              </div>
+                              <div id="fivetable">
+                                <h3>Environmental
+                                </h3>
+                                <div class="table">
+                                  <p>Operating temperature
+                                  </p>
+                                  <p>-25℃ to 50℃ (-13℉ to 122℉)
+                                  </p>
+                                </div>
+                              </div>
+                              <div id="sixtable">
+                                <h3>PC requirement
+                                </h3>
+                                <div class="table">
+                                  <p>CPU</p>
+                                  <p>Intel Core 2 Duo E6400 2.13GHz or above</p>
+                                </div>
+                                <div class="table">
+                                  <p>RAM</p>
+                                  <p>2GB or above, Independent Display Card
+                                  </p>
+                                </div>
+                                <div class="table">
+                                  <p>OS</p>
+                                  <p>Windows 2000, Windows XP, Windows Vista,
+                                    Windows 7, Windows 8
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <section id="tab2" class="tab-panel">
+                          <div class="tab-inner-table">
+                            <div id="getFixed" class="specifications-tab">
+                              <a id="onelinkc" class="tab-linkc">22Video
+                                performance</a>
+                              <a id="twolinkc" class="tab-linkc">22Power</a>
+                              <a id="threelinkc" class="tab-linkc">Sensor</a>
+                              <a id="fourlinkc" class="tab-linkc">Certifications</a>
+                              <a id="fivelinkc" class="tab-linkc">Environmental</a>
+                              <a id="sixlinkc" class="tab-linkc">PC requirement</a>
+                            </div>
+                            <div class="tabcontent">
+                              <div id="onetable">
+                                <h3>Video performance</h3>
+                                <div class="table">
+                                  <p>Model#</p>
+                                  <p>UHG1182E</p>
+                                </div>
+                                <div class="table">
+                                  <p>Low Light Mode
+                                  </p>
+                                  <p>0.5 Lux at F1.2 (Color);0.1 Lux at F1.2 (B/W)</p>
+                                </div>
+                                <div class="table">
+                                  <p>With Infrared</p>
+                                  <p>0.0 lux</p>
+                                </div>
+                                <div class="table">
+                                  <p>2D WDR</p>
+                                  <p>Off / Auto / x2 / x3/ x4 (by normal mode)
+                                  </p>
+                                </div>
+                              </div>
+                              <div id="twotable">
+                                <h3>Power</h3>
+                                <div class="table">
+                                  <p>Power consumption</p>
+                                  <p>DC12V, 7.2W / PoE, 8W</p>
+                                </div>
+                                <div class="table">
+                                  <p>PoE</p>
+                                  <p>IEEE802.3af</p>
+                                </div>
+                                <div class="table">
+                                  <p>Power supply
+                                  </p>
+                                  <p>DC12V ±10%<br>Power over Ethernet (IEEE 802.3af compliant)
+                                  </p>
+                                </div>
+                              </div>
+                              <div id="threetable">
+                                <h3>Sensor</h3>
+                                <div class="table">
+                                  <p>Sensor type</p>
+                                  <p>1/2.3-inch CMOS</p>
+                                </div>
+                                <div class="table">
+                                  <p>Total sensor pixels</p>
+                                  <p>4072 (H) x 3046 (V) = 12,403,312 pixels</p>
+                                </div>
+                                <div class="table">
+                                  <p>With Infrared</p>
+                                  <p>0.0 lux</p>
+                                </div>
+                                <div class="table">
+                                  <p>2D WDR</p>
+                                  <p>Off / Auto / x2 / x3/ x4 (by normal mode)
+                                  </p>
+                                </div>
+                              </div>
+                              <div id="fourtable">
+                                <h3>Certifications
+                                </h3>
+                                <div class="table">
+                                  <p>CE</p>
+                                  <p>Yes, EMI CLASS A</p>
+                                </div>
+                                <div class="table">
+                                  <p>FCC</p>
+                                  <p>Yes, EMI CLASS A</p>
+                                </div>
+                              </div>
+                              <div id="fivetable">
+                                <h3>Environmental
+                                </h3>
+                                <div class="table">
+                                  <p>Operating temperature
+                                  </p>
+                                  <p>-25℃ to 50℃ (-13℉ to 122℉)
+                                  </p>
+                                </div>
+                              </div>
+                              <div id="sixtable">
+                                <h3>PC requirement
+                                </h3>
+                                <div class="table">
+                                  <p>CPU</p>
+                                  <p>Intel Core 2 Duo E6400 2.13GHz or above</p>
+                                </div>
+                                <div class="table">
+                                  <p>RAM</p>
+                                  <p>2GB or above, Independent Display Card
+                                  </p>
+                                </div>
+                                <div class="table">
+                                  <p>OS</p>
+                                  <p>Windows 2000, Windows XP, Windows Vista,
+                                    Windows 7, Windows 8
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <!--top-->
+                        <a href="#" class="back-top">︿</a>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="panel" id="four-panel">
+                    <div id="tr2" class="trclass">
+                      <div class="table-wrap" id="file-list">
                         <table width="100%" border="0" cellpadding="0" cellspacing="0">
                           <tbody>
-                            <tr>
-                              <td class="border-top center text-green" colspan="2">分類標題1</td>
+                            <tr class="center">
+                              <td class="border-bottom border-right">分類</td>
+                              <td class="border-bottom border-right">產品說明</td>
+                              <td class="border-bottom border-right">檔案日期</td>
+                              <td class="border-bottom border-right">檔案大小</td>
+                              <td class="border-bottom">下載中心</td>
                             </tr>
-                            <tr class="gray-bg">
-                              <td class="border-bottom border-right">Model</td>
-                              <td class="center border-bottom">LB1022EX3</td>
+                            <tr class="center ">
+                              <td class="border-bottom border-right">安裝說明書</td>
+                              <td class="border-bottom border-right">安裝說明書 UFG1122E
+                              </td>
+                              <td class="border-bottom border-right">2020-06-29</td>
+                              <td class="border-bottom border-right">7,647KB</td>
+                              <td class="border-bottom">
+                                <select class="table-select download-select" data-path="Installation-UFG1122E-lang.pdf">
+                                  <option value="">Select</option>
+                                  Array
+                                  (
+                                  [0] =&gt; en
+                                  [1] =&gt; tw
+                                  )
+                                  <option value="tw">繁體中文</option>
+                                  <option value="en">English</option>
+                                </select>
+                              </td>
                             </tr>
-                            <tr>
-                              <td class="border-right">Megapixels</td>
-                              <td class="center">1080P</td>
+                            <tr class="center gray-bg">
+                              <td class="border-bottom border-right">操作說明書</td>
+                              <td class="border-bottom border-right">Ultra, ZH,
+                                S及ZS系列攝影機操作手冊</td>
+                              <td class="border-bottom border-right">2020-05-05</td>
+                              <td class="border-bottom border-right">3,387KB</td>
+                              <td class="border-bottom">
+                                <select class="table-select download-select" data-path="UserManual-SSeries-lang.pdf">
+                                  <option value="">Select</option>
+                                  Array
+                                  (
+                                  [0] =&gt; en
+                                  [1] =&gt; tw
+                                  )
+                                  <option value="tw">繁體中文</option>
+                                  <option value="en">English</option>
+                                </select>
+                              </td>
                             </tr>
-                            <tr class="gray-bg">
-                              <td class="border-right">Image Sensor</td>
-                              <td class="center">1/2.7" CMOS image sensor</td>
+                            <tr class="center ">
+                              <td class="border-bottom border-right">韌體</td>
+                              <td class="border-bottom border-right">韌體版本 2.7.92.8848
+                                , 適用型號：UFG1122E, UHG1182E,
+                                ZFR6422, ZFR8122EX3EX2, ZHR6482EX2, ZHR8182EX2,
+                                UHR6582E4</td>
+                              <td class="border-bottom border-right">2020-04-15</td>
+                              <td class="border-bottom border-right">36,120KB</td>
+                              <td class="border-bottom">
+                                <select class="table-select download-select"
+                                  data-path="Firmware-Camera_120FPS-lang.zip">
+                                  <option value="">Select</option>
+                                  Array
+                                  (
+                                  [0] =&gt; en
+                                  )
+                                  <option value="en">English</option>
+                                </select>
+                              </td>
                             </tr>
-                            <tr>
-                              <td class="border-right">Max. Image Pixels</td>
-                              <td class="center">1920 (H) × 1080 (V) = 2,073,600 (pixel)</td>
+                            <tr class="center gray-bg">
+                              <td class="border-bottom border-right">操作說明書</td>
+                              <td class="border-bottom border-right">Ultra,
+                                S與ZS系列IVS攝影機操作手冊</td>
+                              <td class="border-bottom border-right">2019-02-11</td>
+                              <td class="border-bottom border-right">2,442KB</td>
+                              <td class="border-bottom">
+                                <select class="table-select download-select" data-path="UserManual_IVS_Series-lang.pdf">
+                                  <option value="">Select</option>
+                                  Array
+                                  (
+                                  [0] =&gt; en
+                                  [1] =&gt; tw
+                                  )
+                                  <option value="tw">繁體中文</option>
+                                  <option value="en">English</option>
+                                </select>
+                              </td>
                             </tr>
-
-                            <tr class="gray-bg">
-                              <td class="border-right">Scanning System</td>
-                              <td class="center">Progressive Scan</td>
+                            <tr class="center ">
+                              <td class="border-bottom border-right">A&amp;E</td>
+                              <td class="border-bottom border-right">A&amp;E UFG1122
+                              </td>
+                              <td class="border-bottom border-right">2018-08-22</td>
+                              <td class="border-bottom border-right">538KB</td>
+                              <td class="border-bottom">
+                                <select class="table-select download-select" data-path="AE-UFG1122-lang.pdf">
+                                  <option value="">Select</option>
+                                  Array
+                                  (
+                                  [0] =&gt; en
+                                  )
+                                  <option value="en">English</option>
+                                </select>
+                              </td>
                             </tr>
-                            <tr>
-                              <td class="border-right">Min. illumination</td>
-                              <td class="center">0.05 Lux at F1.4 (Low Light Mode)</td>
+                            <tr class="center gray-bg">
+                              <td class="border-bottom border-right">產品型錄</td>
+                              <td class="border-bottom border-right">產品型錄 UFG1122</td>
+                              <td class="border-bottom border-right">2018-01-16</td>
+                              <td class="border-bottom border-right">1,540KB</td>
+                              <td class="border-bottom">
+                                <select class="table-select download-select" data-path="Catalogue-UFG1122-lang.pdf">
+                                  <option value="">Select</option>
+                                  Array
+                                  (
+                                  [0] =&gt; cn
+                                  [1] =&gt; de
+                                  [2] =&gt; en
+                                  [3] =&gt; tw
+                                  )
+                                  <option value="tw">繁體中文</option>
+                                  <option value="cn">简体中文</option>
+                                  <option value="en">English</option>
+                                </select>
+                              </td>
                             </tr>
-                            <tr class="gray-bg">
-                              <td class="border-right">Shutter Time</td>
-                              <td class="center">1/30(1/25)s – 1/8000s</td>
-                            </tr>
-                            <tr>
-                              <td class="border-right">Lens</td>
-                              <td class="center">3 – 10.5 mm (CS Mount)</td>
-                            </tr>
-                            <tr class="gray-bg">
-                              <td class="border-right">Angle of View</td>
-                              <td class="center">105.6° – 28.4°(H), 79.2° – 21.3°(V), 132° – 35.5°(D)</td>
-                            </tr>
-                            <tr>
-                              <td class="border-right">Video Compression</td>
-                              <td class="center">H.264 , Motion JPEG</td>
-                            </tr>
-                            <tr>
-                              <td class="border-top center text-green" colspan="2">分類標題2</td>
-                            </tr>
-                            <tr class="gray-bg">
-                              <td class="border-right">Frame Rates</td>
-                              <td class="center">15 fps @ 1920 × 1080, 30fps @ 720 × 480</td>
-                            </tr>
-                            <tr>
-                              <td class="border-right">Video Streaming</td>
-                              <td class="center">RTP/HTTP, RTP/TCP, RTP/UDP, Multicast</td>
-                            </tr>
-                            <tr class="gray-bg">
-                              <td class="border-right">Video Bitrate</td>
-                              <td class="center">128Kbps – 8Mbps</td>
-                            </tr>
-                            <tr>
-                              <td class="border-right">Sense Up+</td>
-                              <td class="center">Yes</td>
-                            </tr>
-                            <tr class="gray-bg">
-                              <td class="border-right">Auto Gain Control</td>
-                              <td class="center">36 dB Variable Gain</td>
-                            </tr>
-                            <tr>
-                              <td class="border-right">3D Noise Reduction</td>
-                              <td class="center">Off / 1 – 32 Selectable</td>
-                            </tr>
-                            <tr class="gray-bg">
-                              <td class="border-right">2D WDR</td>
-                              <td class="center">Off / Auto / x2 / x3 / x4</td>
-                            </tr>
-                            <tr>
-                              <td class="border-right">Privacy Masking</td>
-                              <td class="center">Off / On (4 zones)</td>
-                            </tr>
-                            <tr>
-                              <td class="border-top center text-green" colspan="2">分類標題3</td>
-                            </tr>
-                            <tr class="gray-bg">
-                              <td class="border-right">ePTZ & Digital Zoom</td>
-                              <td class="center">Digital Zoom</td>
-                            </tr>
-                            <tr>
-                              <td class="border-right">Alarm Function</td>
-                              <td class="center">Alarm / motion detection triggering recording into SD card, Image
-                                upload
-                                over FTP and E-mail by audio / motion detection</td>
-                            </tr>
-                            <tr class="gray-bg">
-                              <td class="border-right">Network Interface</td>
-                              <td class="center">10Mbps / 100Mbps Base-T, RJ-45</td>
-                            </tr>
-                            <tr>
-                              <td class="border-right">Audio</td>
-                              <td class="center">Two-way Audio, G.711 / PCM</td>
-                            </tr>
-                            <tr class="gray-bg">
-                              <td class="border-right">SD Card</td>
-                              <td class="center">Support Micro SD/SDHC card</td>
-                            </tr>
-                            <tr>
-                              <td class="border-right">Operating Temperature</td>
-                              <td class="center">-25°C – +50°C (-13°F – 122°F)</td>
-                            </tr>
-                            <tr class="gray-bg">
-                              <td class="border-right">Dimensions</td>
-                              <td class="center">70mm(W) × 50mm(H) × 110mm(D)</td>
-                            </tr>
-                            <tr>
-                              <td class="border-right">Weight</td>
-                              <td class="center">380g</td>
-                            </tr>
-                            <tr class="gray-bg">
-                              <td class="border-right">Power Supply</td>
-                              <td class="center">DC12V, 6W / PoE, 7.5W</td>
+                            <tr class="center ">
+                              <td class="border-bottom border-right">產品照片</td>
+                              <td class="border-bottom border-right">高畫質產品照片</td>
+                              <td class="border-bottom border-right"></td>
+                              <td class="border-bottom border-right">2,616KB</td>
+                              <td class="border-bottom">
+                                <select class="table-select download-select" data-path="Image-UHG1182 1122-lang.jpg">
+                                  <option value="">Select</option>
+                                  Array
+                                  (
+                                  [0] =&gt; en
+                                  )
+                                  <option value="en">English</option>
+                                </select>
+                              </td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="open">
-                  <div style="cursor:pointer;" data-href="#tr2" class="qa">
-                    <p><span class="open">Downloads</span></p>
-                    <div class="qa-icon"><img src="images/icons/pro_left.png" alt="" class="thisicon"></div>
-                  </div>
-                  <div id="tr2" style="display: none;" class="trclass">
-                    <div class="table-wrap">
-                      <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                        <tbody>
-                          <tr class="center">
-                            <td class="border-bottom border-right">Classification</td>
-                            <td class="border-bottom border-right">Description</td>
-                            <td class="border-bottom border-right">Date</td>
-                            <td class="border-bottom border-right">File Size</td>
-                            <td class="border-bottom">Downloads</td>
-                          </tr>
-                          <tr class="center">
-                            <td class="border-bottom border-right">Data Sheet</td>
-                            <td class="border-bottom border-right">LB1022X</td>
-                            <td class="border-bottom border-right">2015-09-11</td>
-                            <td class="border-bottom border-right">83KB</td>
-                            <td class="border-bottom">
-                              <select class="table-select">
-                                <option value="Select">Select</option>
-                                <option value="English">English</option>
-                                <option value="中文">中文</option>
-                                <option value="Français">Français</option>
-                                <option value="Español">Español</option>
-                                <option value="简体中文">简体中文</option>
-                                <option value="Deutsch">Deutsch</option>
-                                <option value="Italiano">Italiano</option>
-                              </select>
-                            </td>
-                          </tr>
-                          <tr class="gray-bg center">
-                            <td class="border-bottom border-right">Manual</td>
-                            <td class="border-bottom border-right">Quick Installation Guide</td>
-                            <td class="border-bottom border-right">2015-09-24</td>
-                            <td class="border-bottom border-right">1455KB</td>
-                            <td class="border-bottom">
-                              <select class="table-select">
-                                <option value="Select">Select</option>
-                                <option value="English">English</option>
-                                <option value="中文">中文</option>
-                                <option value="Français">Français</option>
-                                <option value="Español">Español</option>
-                                <option value="简体中文">简体中文</option>
-                                <option value="Deutsch">Deutsch</option>
-                                <option value="Italiano">Italiano</option>
-                              </select>
-                            </td>
-                          </tr>
-                          <tr class="center">
-                            <td class="border-bottom border-right">Manual</td>
-                            <td class="border-bottom border-right">IP Camera Instruction Manual</td>
-                            <td class="border-bottom border-right">2015-05-18</td>
-                            <td class="border-bottom border-right">1568KB</td>
-                            <td class="border-bottom">
-                              <select class="table-select">
-                                <option value="Select">Select</option>
-                                <option value="English">English</option>
-                                <option value="中文">中文</option>
-                                <option value="Français">Français</option>
-                                <option value="Español">Español</option>
-                                <option value="简体中文">简体中文</option>
-                                <option value="Deutsch">Deutsch</option>
-                                <option value="Italiano">Italiano</option>
-                              </select>
-                            </td>
-                          </tr>
-                          <tr class="gray-bg center">
-                            <td class="border-bottom border-right">A&E</td>
-                            <td class="border-bottom border-right">LB1022X A&E</td>
-                            <td class="border-bottom border-right">2015-09-17</td>
-                            <td class="border-bottom border-right">186KB</td>
-                            <td class="border-bottom">
-                              <select class="table-select">
-                                <option value="Select">Select</option>
-                                <option value="English">English</option>
-                                <option value="中文">中文</option>
-                                <option value="Français">Français</option>
-                                <option value="Español">Español</option>
-                                <option value="简体中文">简体中文</option>
-                                <option value="Deutsch">Deutsch</option>
-                                <option value="Italiano">Italiano</option>
-                              </select>
-                            </td>
-                          </tr>
-                          <tr class="center">
-                            <td class="border-bottom border-right">Image</td>
-                            <td class="border-bottom border-right">High-Resolution Image</td>
-                            <td class="border-bottom border-right">2014-11-25</td>
-                            <td class="border-bottom border-right">254KB</td>
-                            <td class="border-bottom">
-                              <select class="table-select">
-                                <option value="Select">Select</option>
-                                <option value="English">English</option>
-                                <option value="中文">中文</option>
-                                <option value="Français">Français</option>
-                                <option value="Español">Español</option>
-                                <option value="简体中文">简体中文</option>
-                                <option value="Deutsch">Deutsch</option>
-                                <option value="Italiano">Italiano</option>
-                              </select>
-                            </td>
-                          </tr>
-                          <tr class="gray-bg center">
-                            <td class="border-bottom border-right">Firmware</td>
-                            <td class="border-bottom border-right">Firmware Version 1.1.32 (OS version 1.1)</td>
-                            <td class="border-bottom border-right">2016-01-14</td>
-                            <td class="border-bottom border-right">22995KB</td>
-                            <td class="border-bottom">
-                              <select class="table-select">
-                                <option value="Select">Select</option>
-                                <option value="English">English</option>
-                                <option value="中文">中文</option>
-                                <option value="Français">Français</option>
-                                <option value="Español">Español</option>
-                                <option value="简体中文">简体中文</option>
-                                <option value="Deutsch">Deutsch</option>
-                                <option value="Italiano">Italiano</option>
-                              </select>
-                            </td>
-                          </tr>
-                          <tr class="center">
-                            <td class="border-bottom border-right">Firmware</td>
-                            <td class="border-bottom border-right">Firmware Version 1.4.58 (OS version 1.4)</td>
-                            <td class="border-bottom border-right">2015-12-16</td>
-                            <td class="border-bottom border-right">20298KB</td>
-                            <td class="border-bottom grayline-garytext-btn"><a href="javascript:;">Learn More</a></td>
-                          </tr>
-                          <tr class="gray-bg center">
-                            <td class="border-bottom border-right">Software</td>
-                            <td class="border-bottom border-right"> </td>
-                            <td class="border-bottom border-right">2016-02-15</td>
-                            <td class="border-bottom border-right">6993KB</td>
-                            <td class="border-bottom grayline-garytext-btn"><a href="javascript:;">Learn More</a></td>
-                          </tr>
-                          <tr class="center">
-                            <td class="border-bottom border-right">Software</td>
-                            <td class="border-bottom border-right">IPScan version 1.0.0.62</td>
-                            <td class="border-bottom border-right">2014-08-03</td>
-                            <td class="border-bottom border-right">5536KB</td>
-                            <td class="border-bottom grayline-garytext-btn"><a href="javascript:;">Learn More</a></td>
-                          </tr>
-                          <tr class="gray-bg center">
-                            <td class="border-bottom border-right">Software</td>
-                            <td class="border-bottom border-right">LILINViewer manual installation package Version
-                              1.0.28</td>
-                            <td class="border-bottom border-right">2016-01-18</td>
-                            <td class="border-bottom border-right">7001KB</td>
-                            <td class="border-bottom grayline-garytext-btn"><a href="javascript:;">Learn More</a></td>
-                          </tr>
-                          <tr class="center">
-                            <td class="border-right">Relase Note</td>
-                            <td class="border-right">LILIN IP Camera Relase Note (Ver. 1.4.58)</td>
-                            <td class="border-right">2015-12-16</td>
-                            <td class="border-right">176KB</td>
-                            <td class="grayline-garytext-btn"><a href="javascript:;">Learn More</a></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-                <div class="open">
-                  <div style="cursor:pointer;" data-href="#tr3" class="qa">
-                    <p><span class="open">Accessories</span></p>
-                    <div class="qa-icon"><img src="images/icons/pro_left.png" alt="" class="thisicon"></div>
-                  </div>
-                  <div id="tr3" style="display: none;" class="trclass">
-                    <div class="product">
-                      <ul>
-                        <li>
-                          <div class="pic"><a href="product-d.html"><img src="images/in-page/product/product-d-p02.jpg"
-                                alt=""></a></div>
-                          <h3 class="black center">LB1022X</h3>
-                          <div class="learn-more-btn grayline-garytext-btn"><a href="product-d.html">Learn More</a>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="pic"><a href="product-d.html"><img src="images/in-page/product/product-d-p03.jpg"
-                                alt=""></a></div>
-                          <h3 class="black center">LR7224X / LR7228X</h3>
-                          <div class="learn-more-btn grayline-garytext-btn"><a href="product-d.html">Learn More</a>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="pic"><a href="product-d.html"><img src="images/in-page/product/product-d-p04.jpg"
-                                alt=""></a></div>
-                          <h3 class="black center">LR7424X / LR7428X</h3>
-                          <div class="learn-more-btn grayline-garytext-btn"><a href="product-d.html">Learn More</a>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="pic"><a href="product-d.html"><img src="images/in-page/product/product-d-p02.jpg"
-                                alt=""></a></div>
-                          <h3 class="black center">LR7722X</h3>
-                          <div class="learn-more-btn grayline-garytext-btn"><a href="product-d.html">Learn More</a>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="open">
-                  <div style="cursor:pointer;" data-href="#tr4" class="qa">
-                    <p><span class="open">Video / Live Demo</span></p>
-                    <div class="qa-icon"><img src="images/icons/pro_left.png" alt="" class="thisicon"></div>
-                  </div>
-                  <div id="tr4" style="display: none;" class="trclass">
-                    <div class="video-wrap">
-                      <ul>
-                        <li>
-                          <div class="video-text">
-                            <p>
-                              The award-winning Ultra series IP camera, UFG1122, can record 1080P footage at 120FPS, and
-                              is capable
-                              of seize every moment with the ability to capture all detail with crystal-clear...<a
-                                class="white" href="#">more</a>
-                            </p>
-                            <div class="video-block">
-                              <h3 class="center">Login：demo    Password：3333</h3>
-                              <div class="white-btn video-btn"><a href="http://59.124.49.26:60009" target="_blank">Live
-                                  Demo</a></div>
+
+                  <div class="panel" id="five-panel">
+                    <div id="tr3" style="display: block;" class="trclass">
+                      <div class="product">
+                        <ul>
+                          <li>
+                            <div class="pic">
+                              <a href="https://www.meritlilin.com/index.php/tw/product/MIC02"><img
+                                  src="https://www.meritlilin.com/assets/uploads/product/257/product582d51d5b3dc7.jpg"
+                                  alt="電容式麥克風"></a>
                             </div>
-                          </div><img src="images/in-page/product/product-d-video-p.jpg" alt="">
-                        </li>
-                        <li>
-                          <div class="video-text">
-                            <p></p>
-                            <div class="video-block">
-                              <h3 class="center">Day & Night 1080P HD IP Camera</h3>
-                              <div class="white-btn video-btn"><a href="http://www.youtube.com/watch?v=0O2aH4XLbto"
-                                  class="popup-youtube">Video</a></div>
+                            <h3 class="black center">MIC02</h3>
+                            <div class="learn-more-btn grayline-garytext-btn">
+                              <a href="https://www.meritlilin.com/index.php/tw/product/MIC02">查看更多</a>
                             </div>
-                          </div><img src="images/in-page/product/product-d-video-p02.jpg" alt="">
-                        </li>
-                      </ul>
+                          </li>
+                          <li>
+                            <div class="pic">
+                              <a href="https://www.meritlilin.com/index.php/tw/product/PIH_500"><img
+                                  src="https://www.meritlilin.com/assets/uploads/product/275/product582d6eed1c7e7.jpg"
+                                  alt="攝影機支架"></a>
+                            </div>
+                            <h3 class="black center">PIH-500(停產)</h3>
+                            <div class="learn-more-btn grayline-garytext-btn">
+                              <a href="https://www.meritlilin.com/index.php/tw/product/PIH_500">查看更多</a>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="pic">
+                              <a href="https://www.meritlilin.com/index.php/tw/product/PIH_500L"><img
+                                  src="https://www.meritlilin.com/assets/uploads/product/276/product582d71acdfe7d.jpg"
+                                  alt="攝影機支架"></a>
+                            </div>
+                            <h3 class="black center">PIH-500L(停產)</h3>
+                            <div class="learn-more-btn grayline-garytext-btn">
+                              <a href="https://www.meritlilin.com/index.php/tw/product/PIH_500L">查看更多</a>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="pic">
+                              <a href="https://www.meritlilin.com/index.php/tw/product/PIH_5005M"><img
+                                  src="https://www.meritlilin.com/assets/uploads/product/278/product582d7315776c8.jpg"
+                                  alt="攝影機支架"></a>
+                            </div>
+                            <h3 class="black center">PIH-5005M</h3>
+                            <div class="learn-more-btn grayline-garytext-btn">
+                              <a href="https://www.meritlilin.com/index.php/tw/product/PIH_5005M">查看更多</a>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="pic">
+                              <a href="https://www.meritlilin.com/index.php/tw/product/PIH_5002L"><img
+                                  src="https://www.meritlilin.com/assets/uploads/product/280/product582d746d2a397.jpg"
+                                  alt="攝影機支架"></a>
+                            </div>
+                            <h3 class="black center">PIH-5002L (停產)</h3>
+                            <div class="learn-more-btn grayline-garytext-btn">
+                              <a href="https://www.meritlilin.com/index.php/tw/product/PIH_5002L">查看更多</a>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <!---->
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!--support-->
-  <div class="gradual-bg">
-    <div class="width-middle">
-      <div class="support">
-        <div class="support-item">
-          <img src="images/index/svg/ic-knowledge.svg"><span class="pt">知識庫<br>knowledge</span>
-        </div>
-        <div class="support-item">
-          <img src="images/index/svg/ic-support.svg"><span class="pt">技術支援<br>support</span>
-        </div>
-        <div class="support-item">
-          <img src="images/index/svg/ic-contact.svg"><span class="pt">聯絡我們<br>Contact</span>
-        </div>
-      </div>
-    </div>
-  </div>
+
+  <!--footer-->
   <div id="footer">
     <div class="black-bg padding-small">
       <div class="width-middle">
         <div class="footer-list">
           <ul>
             <li><a href="about.html">About LILIN</a></li>
-            <li>|</li>
-            <li><a href="index.html#contact-us">Contact US</a></li>
-            <li>|</li>
+            <li><a href="#">Green Commitment</a></li>
+            <li><a href="#">Contact US</a></li>
             <li><a href="sitemap.html">Sitemap</a></li>
-            <li>|</li>
-            <li><a
-                href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&amp;j=4c3a426b485c3f6848683a1d1d1d1d5f2443a363189j99"
-                target="_blank">Recruit</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+          <ul>
+            <li><a href="about.html">About LILIN</a></li>
+            <li><a href="#">Green Commitment</a></li>
+            <li><a href="#">Contact US</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+          <ul>
+            <li><a href="about.html">About LILIN</a></li>
+            <li><a href="#">Green Commitment</a></li>
+            <li><a href="#">Contact US</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li><a href="#">Privacy Policy</a></li>
           </ul>
         </div>
-
-        <div class="footer-right-content">
-          <div class="language-wrapper">
-            <div id="quickmenu_container"
-              style="position:absolute; z-index:2; width:135px; height:36px; overflow:hidden;">
-              <div id="btn_quickmenu" style="width:135px;height:36px;" class="hide"><a href="javascript:;"><img
-                    id="Image3" src="images/icons/shortcuts_btn.jpg" name="Image3" width="135" height="36"
-                    border="0"></a></div>
-              <div id="quickmenu_content"
-                style=" background-color:#ffffff; border-left:1px solid #939393;border-right:1px solid #939393; margin:0px;">
-                <ul>
-                  <li><a href="javascript:;">繁體中文</a></li>
-                  <li><a href="javascript:;">English</a></li>
-                  <li><a href="javascript:;">简体中文</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="share-icon">
-            <ul>
-              <li><a href="#"><img src="images/icons/twitter.png" alt=""></a></li>
-              <li><a href="#"><img src="images/icons/fb.png" alt=""></a></li>
-              <li><a href="#"><img src="images/icons/ig.png" alt=""></a></li>
-              <li><a href="#"><img src="images/icons/youtu.png" alt=""></a></li>
-            </ul>
-          </div>
-        </div>
-
+        <div class="text-copyright">Copyright © Merit LILIN Ent. Co., Ltd. All Rights Reserved.</div>
       </div>
     </div>
   </div>
@@ -850,12 +956,99 @@
         </div>
       </div>
     </div>
+
+
   </div>
   <script src="scripts/vendor.js"></script>
   <script src="scripts/plugins.js"></script>
   <script src="scripts/by-map.js"></script>
   <script src="scripts/main.js"></script>
   <script src="scripts/nav.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+    $(document).ready(function () {
+      // 置頂效果
+      $('.back-top').click(function (event) {
+        event.preventDefault();
+        $('html,body').animate({
+          scrollTop: 700
+        }, 700);
+      });
+    });
+  </script>
+  <script>
+    var onelinkc = document.querySelector('#onelinkc')
+    var onetable = document.querySelector('#onetable')
+    var twolinkc = document.querySelector('#twolinkc')
+    var twotable = document.querySelector('#twotable')
+    var threelinkc = document.querySelector('#threelinkc')
+    var threetable = document.querySelector('#threetable')
+    var fourlinkc = document.querySelector('#fourlinkc')
+    var fourtable = document.querySelector('#fourtable')
+    var fivelinkc = document.querySelector('#fivelinkc')
+    var fivetable = document.querySelector('#fivetable')
+    var sixlinkc = document.querySelector('#sixlinkc')
+    var sixtable = document.querySelector('#sixtable')
+    function to(toEl) {
+      // toEl 为指定跳转到该位置的DOM节点    
+      let bridge = toEl;
+      let body = document.body;
+      let height = -120;
+      // 计算该 DOM 节点到 body 顶部距离    
+      do {
+        height += bridge.offsetTop;
+        bridge = bridge.offsetParent;
+      }
+      while (bridge !== body)
+      // 滚动到指定位置    
+      window.scrollTo({
+        top: height,
+        behavior: 'smooth'
+      })
+    }
+    onelinkc.addEventListener('click', function () {
+      to(onetable)
+    });
+    twolinkc.addEventListener('click', function () {
+      to(twotable)
+    });
+    threelinkc.addEventListener('click', function () {
+      to(threetable)
+    });
+    fourlinkc.addEventListener('click', function () {
+      to(fourtable)
+    });
+    fivelinkc.addEventListener('click', function () {
+      to(fivetable)
+    });
+    sixlinkc.addEventListener('click', function () {
+      to(sixtable)
+    });
+  </script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+  </script>
+  <script type="text/javascript">
+    jQuery(function ($) {
+      function fixDiv() {
+        var $cache = $('#getFixed');
+        if ($(window).scrollTop() > 950)
+          $cache.css({
+            'position': 'fixed',
+            'top': '95px'
+          });
+        else
+          $cache.css({
+            'position': 'absolute',
+            'top': '0'
+          });
+      }
+      $(window).scroll(fixDiv);
+      fixDiv();
+    });
+  </script>
+
 </body>
 
 </html>

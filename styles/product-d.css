@@ -1,0 +1,279 @@
+.warpper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+.tabs {
+  display: flex;
+  flex-direction: row;
+}
+.tab {
+  cursor: pointer;
+  padding: 10px 25px;
+  margin: 0px;
+  background: linear-gradient(90deg, #c3c3c3 2%, #c7c7c7 6%, #c7c7c7 100%);
+  display: inline-block;
+  color: #fff;
+  /* border-radius: 3px 3px 0px 0px; */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  width: auto;
+}
+.tab:hover {
+  background: #d0021b;
+}
+.s-tab {
+  cursor: pointer;
+  padding: 10px 20px;
+  /* margin: 0px 2px; */
+  background: linear-gradient(90deg, #c3c3c3 2%, #c7c7c7 6%, #c7c7c7 100%);
+  display: inline-block;
+  color: #fff;
+  /* border-radius: 3px 3px 0px 0px; */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+}
+
+.panels {
+  background: #fffffff6;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+  height: auto;
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 20px 40px;
+}
+
+.panel {
+  display: none;
+  animation: fadein 0.8s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.panel-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.panel-main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.panel-main p {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.radio {
+  display: none;
+}
+
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel,
+#three:checked ~ .panels #three-panel,
+#four:checked ~ .panels #four-panel,
+#five:checked ~ .panels #five-panel {
+  display: block;
+}
+
+#one:checked ~ .tabs #one-tab,
+#two:checked ~ .tabs #two-tab,
+#three:checked ~ .tabs #three-tab,
+#four:checked ~ .tabs #four-tab,
+#five:checked ~ .tabs #five-tab {
+  background: #fffffff6;
+  color: #000;
+  /* border-top: 3px solid #000; */
+}
+
+/*specifications*/
+/* Style the tab */
+.tab-inner-table {
+  position: relative;
+  min-height: 1000px;
+}
+
+.specifications-tab {
+  /* float: left; */
+  /* border: 1px solid #ccc; */
+  background-color: #eeeeee;
+  width: 15.5vw;
+  padding: 20px 0 20px 20px;
+  position: absolute;
+  top: 0;
+}
+
+/* Style the buttons inside the tab */
+.specifications-tab .tab-linkc {
+  display: block;
+  color: black;
+  padding: 8px 0 8px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  margin-bottom: 2px;
+  font-weight: 300;
+}
+
+/* Change background color of buttons on hover */
+.specifications-tab .tab-linkc:hover {
+  background-color: #fff;
+  border-left: 8px solid #d0021b;
+  padding: 8px 0 8px 16px;
+}
+
+/* Create an active/current "tab button" class */
+.specifications-tab .tab-linkc.active {
+  background-color: #fff;
+  border-left: 8px solid #d0021b;
+  font-weight: bold;
+  padding: 8px 0 8px 16px;
+}
+
+/* Style the tab content */
+.tabcontent {
+  /* float: left; */
+  padding: 20px;
+  /* border: 1px solid #ccc; */
+  width: 70%;
+  border-left: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.tabcontent h3 {
+  font-size: 21px;
+  color: #d0021b;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  margin-top: 0;
+}
+
+.tabcontent .table {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+.tabcontent .table:last-child {
+  margin-bottom: 20px;
+}
+.tabcontent .table p {
+  width: 50%;
+  margin: 0;
+  line-height: 30px;
+  font-weight: lighter;
+}
+
+.tabcontent .table p:first-child {
+  font-weight: bold;
+}
+
+/*
+CSS for the main interaction
+*/
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+
+/*
+Styling
+*/
+/* body {
+  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+  color: #333;
+  font-weight: 300;
+} */
+
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  border-bottom: 0;
+  cursor: pointer;
+  background: linear-gradient(90deg, #c3c3c3 2%, #c7c7c7 6%, #c7c7c7 100%);
+  color: #fff;
+}
+.tabset > label:hover {
+  background: #d0021b;
+}
+.tabset > input:checked + label {
+  background: #fff;
+  color: #333333;
+}
+
+.tab-panel {
+  border-top: 1px solid #ccc;
+}
+@media screen and (max-width: 768px) {
+  .tab {
+    padding: 10px 10px;
+    font-size: 22px;
+  }
+  .panels {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .tabs {
+    overflow-x: auto;
+    width: 95%;
+  }
+  .tab {
+    padding: 5px 15px;
+    font-size: 18px;
+  }
+  .panels {
+    width: 95%;
+    padding: 20px 15px;
+  }
+  .specifications-tab {
+    padding: 20px 0 20px 5px;
+    width: 32vw;
+  }
+  .specifications-tab button {
+    padding: 5px;
+    font-size: 14px;
+  }
+  .specifications-tab .tab-linkc:hover {
+    border-left: 5px solid #d0021b;
+    padding: 8px 0 8px 8px;
+  }
+  .specifications-tab .tab-linkc {
+    font-size: 15px;
+  }
+  .tabcontent {
+    width: 55%;
+    padding: 0px 10px;
+  }
+}

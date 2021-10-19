@@ -1,12 +1,12 @@
     function toggleNav() {
       var nav = document.getElementById("mySidebar"),
        main = document.getElementById("main");
-      if (nav.style.width == "250px") {
+      if (nav.style.width == "81vw") {
         nav.style.width = "0";
         main.style.marginRight = "0";
       }
       else {
-        nav.style.width = "250px";
+        nav.style.width = "81vw";
         main.style.marginRight = "0px";
       }
     }
@@ -32,3 +32,17 @@
         }
       });
     }
+
+    /*bg*/
+    $(window).scroll(function () {
+      var currentscrollTop = $(window).scrollTop();
+      if (currentscrollTop >= 80) {
+        if (!$('.nav-menu').hasClass('dark')) {
+          $('.nav-menu').addClass('dark')
+        }
+      } else {
+        if (!$('.toggle-nav').hasClass('active')) {
+          $('.nav-menu').removeClass('dark')
+        }
+      }
+    })

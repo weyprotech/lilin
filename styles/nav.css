@@ -3,7 +3,7 @@
   width: 0;
   position: fixed;
   z-index: 99;
-  top: 64px;
+  top: 40px;
   left: 0;
   background-color: #111;
   overflow-x: hidden;
@@ -29,7 +29,7 @@
 }
 
 .openbtn {
-  width: 70px;
+  width: 19vw;
   height: 60px;
   cursor: pointer;
   border: none;
