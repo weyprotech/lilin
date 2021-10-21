@@ -531,6 +531,15 @@ nav .nav-top div {
   display: none;
 }
 
+.add-text p {
+  text-align: center;
+  padding: 0 0 1em 0;
+  margin: 0 0 1em 0 !important;
+  border-bottom: 1px solid #bebebe;
+  min-height: 45px !important;
+  white-space: normal !important;
+}
+
 @media screen and (max-width: 768px) {
   .pc-d {
     display: none;
