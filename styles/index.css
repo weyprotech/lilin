@@ -1736,6 +1736,27 @@ section:nth-of-type(5) {
   }
 }
 
+@media screen and (max-width: 1366px) {
+  section:nth-of-type(5) {
+    height: 125vh;
+  }
+  .news-label::before {
+    top: 60vh;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  section:nth-of-type(5) {
+    height: 185vh;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  section:nth-of-type(5) {
+    height: 160vh;
+  }
+}
+
 @media screen and (max-width: 988px) {
   section:nth-of-type(5) {
     height: 210vh;
