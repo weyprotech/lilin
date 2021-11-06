@@ -201,7 +201,7 @@ html {
   text-align: left;
   cursor: pointer;
   font-size: 17px;
-  height: 280px;
+  height: calc(100vh / 3);
   font-size: clamp(1.2rem, 2.5vw, 2.8rem);
   color: #fff;
   background: rgba(255, 255, 255, 0.2);
@@ -1728,6 +1728,18 @@ section {
 
 section:nth-of-type(5) {
   height: 130vh;
+}
+
+@media screen and (max-width: 1440px) {
+  section:nth-of-type(5) {
+    height: 185vh;
+  }
+}
+
+@media screen and (max-width: 988px) {
+  section:nth-of-type(5) {
+    height: 210vh;
+  }
 }
 
 /*contact*/
