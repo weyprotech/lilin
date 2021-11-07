@@ -354,6 +354,9 @@ nav {
 .p-t-7 {
   padding-top: 78px;
 }
+.p-a {
+  padding: 20px;
+}
 .w-100 {
   width: 100% !important;
 }
@@ -503,6 +506,7 @@ nav {
 
 #primary_nav_wrap .nav-sub-menu {
   display: flex;
+  border-bottom: 1px solid #ddd;
 }
 #primary_nav_wrap {
   .level-one {
@@ -525,6 +529,22 @@ nav {
     }
   }
 }
+.nav-ad {
+  color: #333;
+  cursor: pointer;
+  img {
+    max-width: 150px;
+  }
+  .nav-ad-text {
+    padding: 0 10px;
+    h5 {
+      color: #000;
+      font-weight: bold;
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+}
 .display-pc {
   display: block;
 }
@@ -541,7 +561,7 @@ nav {
     white-space: normal !important;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1680px) {
   #primary_nav_wrap ul ul ul {
     width: 48vw;
   }
