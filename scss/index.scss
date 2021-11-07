@@ -1458,13 +1458,28 @@ html {
 .index-news-list a {
   color: #333;
 }
-.index-news-list h5 {
-  font-size: 30px;
-  line-height: 30px;
-  margin: 0;
-}
-.index-news-list span {
-  font-size: 25px;
+// .index-news-list h5 {
+//   font-size: 30px;
+//   line-height: 30px;
+//   margin: 0;
+// }
+// .index-news-list span {
+//   font-size: 25px;
+// }
+.index-news-list {
+  h6 {
+    font-size: clamp(1rem, 1.2vw, 1.8rem);
+    font-weight: 500;
+  }
+  h5 {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    margin: 0;
+    line-height: clamp(1rem, 1.5vw, 2rem);
+  }
+  p {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 .news-m {
   margin: 50px 0;
@@ -1489,7 +1504,7 @@ html {
   position: absolute;
   padding: 5px 10px;
   text-align: center;
-  top: 410px;
+  top: 370px;
   left: 30px;
 }
 .news-label-s::before {
@@ -1508,14 +1523,14 @@ html {
   top: 125px;
   left: 30px;
 }
-.news-m .index-news-list h5 {
-  font-size: 23px;
-  line-height: 25px;
-  margin: 0;
-}
-.news-m .index-news-list span {
-  font-size: 23px;
-}
+// .news-m .index-news-list h5 {
+//   font-size: 23px;
+//   line-height: 25px;
+//   margin: 0;
+// }
+// .news-m .index-news-list span {
+//   font-size: 23px;
+// }
 /*contact*/
 .bg-contact {
   background: url(../images/index/bg-contact.jpg) no-repeat bottom #000;
@@ -1576,6 +1591,14 @@ section {
       height: 185vh;
     }
   }
+  .bg-contact {
+    background: url(../images/index/bg-contact.jpg) no-repeat -300px 100px #000;
+  }
+}
+@media screen and (max-width: 1680px) {
+  .news-label::before {
+    top: 38vh;
+  }
 }
 @media screen and (max-width: 1366px) {
   section {
@@ -1584,7 +1607,7 @@ section {
     }
   }
   .news-label::before {
-    top: 60vh;
+    top: 30vh;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -1592,6 +1615,12 @@ section {
     &:nth-of-type(5) {
       height: 185vh;
     }
+  }
+  .news-m {
+    margin: 20px 0;
+  }
+  .m-y-2 {
+    margin: 10px 10px !important;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1916,6 +1945,7 @@ $tab-wrap-border-radius: 6px;
   .news-list-bg {
     width: 90%;
   }
+
   .index-news-list .m-l-2 {
     margin-left: 0;
   }
@@ -1925,6 +1955,7 @@ $tab-wrap-border-radius: 6px;
   .news-label-s {
     margin-bottom: 20px;
   }
+
   /*video*/
   .ui-tabs-vertical {
     flex-direction: column;
