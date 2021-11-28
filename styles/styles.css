@@ -587,7 +587,7 @@ nav .nav-top div img {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 834px) {
   .pc-d {
     display: none;
   }
