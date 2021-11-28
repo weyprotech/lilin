@@ -1623,6 +1623,14 @@ section {
     margin: 10px 10px !important;
   }
 }
+@media screen and (max-width: 1200px) {
+  section {
+    height: auto;
+    &:nth-of-type(5) {
+      height: 150vh;
+    }
+  }
+}
 @media screen and (max-width: 1024px) {
   section {
     &:nth-of-type(5) {
@@ -1630,6 +1638,7 @@ section {
     }
   }
 }
+
 @media screen and (max-width: 988px) {
   section {
     &:nth-of-type(5) {
@@ -1990,12 +1999,7 @@ $tab-wrap-border-radius: 6px;
   .ui-tabs-vertical .ui-tabs-nav li a {
     height: auto;
   }
-  section {
-    height: auto;
-    &:nth-of-type(5) {
-      height: 125vh;
-    }
-  }
+
   .bg-video {
     display: flex;
     flex-direction: column;
@@ -2024,6 +2028,23 @@ $tab-wrap-border-radius: 6px;
     width: 100vw;
   }
 }
+@media (orientation: portrait), (max-width: 1024px) {
+  section {
+    height: auto;
+    &:nth-of-type(5) {
+      height: 100vh;
+    }
+  }
+}
+@media (orientation: portrait), (max-width: 834px) {
+  section {
+    height: auto;
+    &:nth-of-type(5) {
+      height: 125vh;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .section-direction [class*="direction__"] {
     height: 480px;
@@ -2033,6 +2054,24 @@ $tab-wrap-border-radius: 6px;
     &:nth-of-type(5) {
       height: 140vh;
     }
+  }
+}
+@media screen and (max-width: 600px) {
+  .excerpt .btn-white {
+    margin: 160px auto 0 auto;
+  }
+  [class*="direction__"] .trigger-btn label {
+    font-size: 30px;
+    padding-bottom: 30px;
+  }
+  .news-label-s::before {
+    top: 360px;
+  }
+  .bg-contact h2 {
+    padding-top: 20%;
+  }
+  section:nth-of-type(5) {
+    height: 150vh;
   }
 }
 @media screen and (max-width: 570px) {
@@ -2072,6 +2111,11 @@ $tab-wrap-border-radius: 6px;
   }
   .support-item {
     font-size: 18px;
+  }
+  section {
+    &:nth-of-type(5) {
+      height: 200vh;
+    }
   }
 }
 @media screen and (max-width: 414px) {
@@ -2188,5 +2232,10 @@ $tab-wrap-border-radius: 6px;
   }
   .news-label-s::before {
     top: 215px;
+  }
+  section {
+    &:nth-of-type(5) {
+      height: 225vh;
+    }
   }
 }
