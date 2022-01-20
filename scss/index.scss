@@ -1339,7 +1339,7 @@ html {
   background: url(../images/index/bg-video.jpg) no-repeat center center;
   background-size: 100%;
   width: 100%;
-  height: auto;
+  height: 100vh;
   padding: 50px 0;
   overflow-x: hidden;
 }
@@ -1491,38 +1491,52 @@ html {
   display: flex;
   flex-direction: row;
 }
-.news-label::before {
+// .news-label::before {
+//   width: 100px;
+//   height: 20px;
+//   border-radius: 5px;
+//   background: #1367fe;
+//   content: "Exhibition";
+//   color: #fff;
+//   font-size: 14px;
+//   line-height: 18px;
+//   display: block;
+//   position: absolute;
+//   padding: 5px 10px;
+//   text-align: center;
+//   top: 370px;
+//   left: 30px;
+// }
+.news-label-tab {
   width: 100px;
   height: 20px;
   border-radius: 5px;
   background: #1367fe;
-  content: "Exhibition";
   color: #fff;
   font-size: 14px;
   line-height: 18px;
-  display: block;
-  position: absolute;
+  margin-top: 10px;
   padding: 5px 10px;
   text-align: center;
   top: 370px;
   left: 30px;
 }
-.news-label-s::before {
-  width: 80px;
-  height: 20px;
-  border-radius: 5px;
-  background: #1367fe;
-  content: "Exhibition";
-  color: #fff;
-  font-size: 14px;
-  line-height: 18px;
-  display: block;
-  position: absolute;
-  padding: 5px 10px;
-  text-align: center;
-  top: 125px;
-  left: 30px;
-}
+// .news-label-s::before {
+//   width: 80px;
+//   height: 20px;
+//   border-radius: 5px;
+//   background: #1367fe;
+//   content: "Exhibition";
+//   color: #fff;
+//   font-size: 14px;
+//   line-height: 18px;
+//   display: block;
+//   position: absolute;
+//   padding: 5px 10px;
+//   text-align: center;
+//   top: 125px;
+//   left: 30px;
+// }
 // .news-m .index-news-list h5 {
 //   font-size: 23px;
 //   line-height: 25px;
